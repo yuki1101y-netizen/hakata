@@ -1,0 +1,706 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<!-- ============================================================
+     LINEのURL：ここだけ書き換えてください。
+     LINE_URL … 友だち追加のURL。ページ内のLINEボタンはすべてこれを使います。
+     BOOK_URL … LiMEの予約カレンダーを直接開くURL（あれば）。
+                「空いている日を見る」ボタンだけがこれを使います。
+                空のままなら、友だち追加のURLに飛びます。
+     ============================================================ -->
+<script>
+  window.LINE_URL = "https://lin.ee/XXXXXXX";
+  window.BOOK_URL = "";
+</script>
+
+<title>揉んでも戻る肩こり・頭痛に｜博多駅筑紫口 徒歩3分｜博多Hakase鍼灸整体院</title>
+<meta name="description" content="揉んでもらうとその日は軽いのに、数日で戻る肩こり・頭痛に。目・頭・お腹まで見て、鍼と整体を使い分けます。初回60分9,800円（税込・追加料金なし）。個室・シャツのままで受けられます。LINEから予約・相談できます。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="揉んでも戻る肩こり・頭痛に｜博多Hakase鍼灸整体院">
+<meta property="og:description" content="目・頭・お腹まで見て、鍼と整体を使い分けます。博多駅筑紫口 徒歩3分。初回60分9,800円（税込）。">
+<!-- 公開URLが決まったら絶対URL（https://〜/images/ogp.jpg）に書き換える -->
+<meta property="og:image" content="/katakori/images/ogp.jpg">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Meta Pixel：ここにベースコードを貼る -->
+<!-- GA4：ここにgtag.jsのコードを貼る -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- 見出し：しっぽり明朝／院長の言葉：Klee One（手書き風）／本文：スマホ標準のゴシック -->
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Klee+One:wght@400;600&family=Lora:wght@500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg: #FBF8F3;
+    --beige: #F4EDE2;
+    --mint: #E8F0EA;
+    --white: #FFFFFF;
+    --green: #2E5D4F;
+    --green-dk: #22473C;
+    --ink: #3D3732;
+    --sub: #6B625A;
+    --gold: #C29A5B;
+    --marker: #F6E5B5;
+    --line: rgba(61, 55, 50, .12);
+    --mincho: "Shippori Mincho", "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Noto Serif JP", serif;
+    --maru: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Noto Sans CJK JP", "Yu Gothic", sans-serif;
+    --lora: "Lora", "Shippori Mincho", serif;
+    --head: var(--mincho);
+    --body: var(--maru);
+    --voice: "Klee One", var(--maru);
+    --track: .02em;
+    --r: 20px;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { margin: 0; background: #EFEAE2; color: var(--ink); font-family: var(--body); font-size: 15.5px; line-height: 1.95; letter-spacing: var(--track); }
+  img { display: block; max-width: 100%; height: auto; }
+  p { margin: 0 0 1em; } p:last-child { margin-bottom: 0; }
+  h1, h2, h3 { margin: 0; font-family: var(--head); font-weight: 700; word-break: auto-phrase; }
+  ol, ul, dl, dd { margin: 0; padding: 0; list-style: none; }
+  .page { max-width: 480px; margin: 0 auto; background: var(--bg); padding-bottom: 88px; overflow: hidden; }
+  .ap { word-break: auto-phrase; }
+  .center { text-align: center; }
+  .mk { background: linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 94%, transparent 94%); }
+  .en { font-family: var(--lora); }
+
+  /* ---------- ボタン ---------- */
+  .btn-line {
+    position: relative; display: flex; align-items: center; justify-content: center;
+    width: 100%; min-height: 62px; padding: 12px 44px 12px 54px;
+    background: var(--green); color: #fff; text-decoration: none; border-radius: 999px;
+    box-shadow: 0 8px 18px rgba(46, 93, 79, .28);
+    font-family: var(--body); font-weight: 700; font-size: 17px; letter-spacing: .06em; line-height: 1.4;
+    transition: transform .1s, box-shadow .1s;
+  }
+  .btn-line .ico { position: absolute; left: 22px; top: 50%; width: 24px; height: 24px; margin-top: -12px; }
+  .btn-line::after { content: ""; position: absolute; right: 24px; top: 50%; width: 8px; height: 8px; margin-top: -5px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(45deg); }
+  .btn-line:active { transform: translateY(2px); box-shadow: 0 4px 10px rgba(46, 93, 79, .25); }
+  .btn-line:focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; }
+  .btn-note { margin: 12px 0 0; font-size: 13px; color: var(--sub); text-align: center; line-height: 1.6; }
+  .cta { margin-top: 34px; }
+
+  /* ---------- 院長のふきだし ---------- */
+  .voice { display: grid; grid-template-columns: 54px 1fr; gap: 12px; align-items: start; }
+  .voice img { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; border: 2px solid #fff; box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+  .bub { font-family: var(--voice); position: relative; background: var(--white); border-radius: 18px; padding: 12px 16px; font-size: 14px; line-height: 1.8; box-shadow: 0 2px 10px rgba(61,55,50,.06); }
+  .bub::before { content: ""; position: absolute; left: -7px; top: 18px; width: 14px; height: 14px; background: inherit; transform: rotate(45deg); border-radius: 2px; }
+  .bub .who { display: block; font-size: 11.5px; color: var(--sub); margin-bottom: 2px; }
+
+  /* ---------- 料金カード ---------- */
+  .price { background: var(--beige); border-radius: var(--r); padding: 18px 16px 16px; text-align: center; }
+  .price .first { display: inline-block; background: var(--green); color: #fff; font-size: 12.5px; font-weight: 700; letter-spacing: .1em; padding: 2px 14px; border-radius: 999px; line-height: 1.8; }
+  .price .row { margin: 6px 0 0; line-height: 1.2; color: var(--green-dk); font-family: var(--head); font-weight: 700; }
+  .price .row .lbl { font-size: 17px; margin-right: 8px; }
+  .price .row .num { font-family: var(--lora); font-weight: 500; font-size: 42px; letter-spacing: .01em; background: linear-gradient(transparent 64%, var(--marker) 64%, var(--marker) 92%, transparent 92%); padding: 0 3px; }
+  .price .row .yen { font-size: 20px; }
+  .price .row .tax { font-family: var(--body); font-weight: 500; font-size: 11px; vertical-align: super; }
+  .price .inc { margin: 8px 0 0; font-size: 13px; line-height: 1.7; }
+  .price .inc b { color: var(--green-dk); }
+
+  .chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
+  .chips li { background: var(--mint); color: var(--green-dk); font-size: 12.5px; font-weight: 500; border-radius: 999px; padding: 3px 12px; line-height: 1.7; }
+
+  /* ---------- FV ---------- */
+  .fv { position: relative; }
+  .fv-photo { position: relative; }
+  .fv-photo img { width: 100%; height: auto; }
+  .fv-photo::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22, 44, 37, .82) 0%, rgba(22, 44, 37, .55) 34%, rgba(22, 44, 37, 0) 62%); }
+  .fv-head { position: absolute; top: 14px; left: 20px; right: 20px; display: flex; justify-content: space-between; align-items: center; color: #fff; font-size: 12px; letter-spacing: .08em; }
+  .fv-head .name { font-family: var(--head); font-weight: 700; font-size: 14px; letter-spacing: .12em; }
+  .fv-copy { position: absolute; left: 22px; right: 22px; top: 56px; color: #fff; }
+  .fv-copy h1 { font-size: 29px; line-height: 1.5; letter-spacing: .04em; text-shadow: 0 2px 12px rgba(0,0,0,.25); }
+  .fv-copy h1 span { display: inline-block; }
+  .fv-copy .sub { margin-top: 12px; font-size: 14.5px; font-weight: 500; line-height: 1.8; text-shadow: 0 1px 8px rgba(0,0,0,.3); }
+  .fv-sheet { position: relative; margin-top: -30px; background: var(--bg); border-radius: 26px 26px 0 0; padding: 20px 20px 30px; }
+  .fv-sheet .voice { margin-bottom: 12px; align-items: center; }
+  .fv-sheet .price { padding: 12px 14px 12px; }
+  .fv-sheet .price .row .num { font-size: 38px; }
+  .fv-sheet .chips { margin-top: 18px; }
+
+  /* ---------- セクション ---------- */
+  .sec { position: relative; padding: 56px 22px 58px; }
+  .sec.beige { background: var(--beige); }
+  .sec.mint { background: var(--mint); }
+  .wave { position: absolute; left: 0; top: -27px; width: 100%; height: 28px; display: block; color: var(--bg); }
+  .sec.beige .wave { color: var(--beige); }
+  .sec.mint .wave { color: var(--mint); }
+  .wave.flip { transform: scaleX(-1); }
+  .sec > h2 { text-align: center; font-size: 23px; line-height: 1.6; letter-spacing: .06em; color: var(--green-dk); margin-bottom: 22px; }
+  .lead { text-align: center; font-size: 15px; line-height: 2; }
+  .note { font-size: 13px; color: var(--sub); line-height: 1.8; }
+
+  /* ② 1日 */
+  .tl { position: relative; margin: 6px 0 0; padding-left: 4px; }
+  .tl::before { content: ""; position: absolute; left: 39px; top: 18px; bottom: 18px; border-left: 2px dotted rgba(194, 154, 91, .55); }
+  .tl li { position: relative; display: grid; grid-template-columns: 72px 1fr; gap: 12px; align-items: center; padding: 7px 0; }
+  .tl .tm { justify-self: start; z-index: 1; min-width: 72px; text-align: center; background: var(--white); border: 1px solid rgba(194, 154, 91, .5); color: #86622D; font-size: 12.5px; font-weight: 700; border-radius: 999px; padding: 2px 8px; line-height: 1.7; }
+  .tl p { margin: 0; font-size: 15.5px; line-height: 1.65; word-break: auto-phrase; }
+  .tl li.hl .tm { background: var(--green); color: #fff; border-color: var(--green); }
+  .tl li.hl p { font-weight: 700; color: var(--green-dk); }
+  .ask { margin: 30px 0 0; text-align: center; font-family: var(--head); font-weight: 700; font-size: 24px; line-height: 1.6; color: var(--green-dk); letter-spacing: .06em; }
+
+  /* ③ なぜ戻る */
+  .chain-title { text-align: center; font-size: 13px; color: var(--sub); margin: 28px 0 4px; letter-spacing: .1em; }
+  .chain li { position: relative; display: grid; grid-template-columns: 68px 1fr; gap: 16px; align-items: center; padding: 10px 0; }
+  .chain li:not(:last-child)::after { content: ""; position: absolute; left: 33px; top: 80px; height: 18px; border-left: 2px dotted var(--gold); }
+  .blob { width: 68px; height: 68px; display: flex; align-items: center; justify-content: center; background: var(--white); border-radius: 48% 52% 44% 56% / 56% 44% 56% 44%; font-family: var(--head); font-weight: 700; font-size: 26px; color: var(--green-dk); box-shadow: 0 4px 14px rgba(61,55,50,.07); }
+  .chain li:nth-child(2) .blob { border-radius: 56% 44% 52% 48% / 46% 56% 44% 54%; }
+  .chain li.end .blob { background: var(--green); color: #fff; border-radius: 50% 50% 46% 54% / 52% 48% 52% 48%; }
+  .chain b { display: block; font-family: var(--head); font-weight: 700; font-size: 17px; color: var(--green-dk); line-height: 1.5; }
+  .chain p { margin: 2px 0 0; font-size: 14px; line-height: 1.7; word-break: auto-phrase; }
+  .aside { margin: 16px 0 0; background: rgba(255,255,255,.65); border-radius: 14px; padding: 10px 14px; font-size: 13.5px; line-height: 1.75; text-align: center; }
+  .sec .voice { margin-top: 26px; }
+  .concept { position: relative; margin: 34px 0 0; border-radius: 24px; overflow: hidden; }
+  .concept img { width: 100%; height: auto; }
+  .concept::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22,44,37,.85) 0%, rgba(22,44,37,.5) 28%, rgba(22,44,37,0) 50%); }
+  .concept figcaption { position: absolute; left: 16px; right: 16px; top: 22px; color: #fff; text-align: center; font-family: var(--head); font-weight: 700; font-size: 18px; line-height: 1.85; letter-spacing: .04em; }
+  .concept figcaption span { display: inline-block; }
+
+  /* ④ 使い分け */
+  .photo-r { margin: 6px 0 0; border-radius: 24px; overflow: hidden; }
+  .photo-r img { width: 100%; height: auto; }
+  .match { margin: 20px 0 0; background: var(--white); border-radius: var(--r); padding: 6px 16px; box-shadow: 0 2px 12px rgba(61,55,50,.05); }
+  .match li { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 12px 0; font-size: 14.5px; line-height: 1.6; }
+  .match li + li { border-top: 1px dashed var(--line); }
+  .match .w { flex: none; background: var(--mint); color: var(--green-dk); font-weight: 700; font-size: 14px; border-radius: 999px; padding: 2px 14px; line-height: 1.8; }
+  .match .why { word-break: auto-phrase; }
+  .match .why::after { content: "→"; color: var(--gold); margin-left: 6px; }
+
+  /* ⑤ 院長 */
+  .prof-photo { position: relative; margin: 0 8px 30px; }
+  .prof-photo::before { content: ""; position: absolute; right: -18px; top: -14px; width: 62%; height: 70%; background: var(--beige); border-radius: 46% 54% 42% 58% / 54% 42% 58% 46%; }
+  .prof-photo img { position: relative; width: 100%; height: auto; border-radius: 24px; }
+  .story p { font-size: 15px; line-height: 2; }
+  .story .em { font-family: var(--head); font-weight: 700; font-size: 17px; color: var(--green-dk); line-height: 1.8; }
+  .nots { margin: 6px 0 18px; }
+  .nots .ttl { font-size: 12.5px; color: var(--sub); margin-bottom: 6px; }
+  .nots .chips { justify-content: flex-start; }
+  .nots .chips li { background: var(--white); border: 1px solid var(--line); }
+  .sig { margin-top: 26px; text-align: center; }
+  .sig .q { display: block; font-size: 12.5px; color: var(--sub); line-height: 1.8; }
+  .sig .nm { display: block; font-family: var(--head); font-weight: 700; font-size: 24px; letter-spacing: .3em; color: var(--green-dk); line-height: 1.6; margin-top: 2px; }
+
+  /* ⑥ 変化 */
+  .flow2 { display: grid; grid-template-columns: 1fr 26px 1fr; align-items: stretch; }
+  .flow2 .st { background: var(--white); border-radius: var(--r); padding: 16px 12px; text-align: center; box-shadow: 0 2px 12px rgba(61,55,50,.05); }
+  .flow2 .st:last-child { background: var(--green); color: #fff; }
+  .flow2 .lbl { display: block; font-size: 12.5px; font-weight: 700; letter-spacing: .08em; color: #86622D; }
+  .flow2 .st:last-child .lbl { color: var(--marker); }
+  .flow2 p { margin: 6px 0 0; font-size: 14px; line-height: 1.7; word-break: auto-phrase; }
+  .flow2 .ar { align-self: center; justify-self: center; width: 10px; height: 10px; border-top: 2px solid var(--gold); border-right: 2px solid var(--gold); transform: rotate(45deg); }
+  .headache { margin-top: 22px; background: var(--beige); border-radius: var(--r); padding: 16px 16px; }
+  .headache .ttl { font-weight: 700; font-size: 14px; color: var(--green-dk); margin-bottom: 6px; }
+  .headache li { position: relative; padding-left: 14px; font-size: 13.5px; line-height: 1.8; word-break: auto-phrase; }
+  .headache li::before { content: ""; position: absolute; left: 0; top: 11px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+  .case { margin-top: 30px; background: var(--white); border-radius: 24px; padding: 24px 20px 20px; box-shadow: 0 4px 18px rgba(61,55,50,.07); }
+  .case h3 { font-size: 16px; color: var(--green-dk); text-align: center; margin-bottom: 4px; }
+  .case .who { text-align: center; font-size: 12.5px; color: var(--sub); margin-bottom: 14px; }
+  .cflow li { position: relative; display: grid; grid-template-columns: 54px 1fr; gap: 12px; padding-bottom: 14px; }
+  .cflow li:not(:last-child)::after { content: ""; position: absolute; left: 26px; top: 30px; bottom: 2px; border-left: 2px dotted rgba(194,154,91,.6); }
+  .cflow .k { width: 54px; height: 28px; border-radius: 999px; background: var(--mint); color: var(--green-dk); font-size: 12.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .cflow li:last-child .k { background: var(--green); color: #fff; }
+  .cflow p { margin: 0; font-size: 14.5px; line-height: 1.75; }
+
+  /* ⑦ 鍼が初めての方へ（会話） */
+  .chat { display: flex; flex-direction: column; gap: 12px; }
+  .chat .q { align-self: flex-end; max-width: 80%; margin: 0; background: var(--white); border-radius: 18px 18px 4px 18px; padding: 9px 15px; font-size: 14.5px; font-weight: 700; color: var(--green-dk); box-shadow: 0 2px 8px rgba(61,55,50,.05); }
+  .chat .a { display: grid; grid-template-columns: 40px 1fr; gap: 10px; align-items: start; }
+  .chat .a img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; }
+  .chat .a p { font-family: var(--voice); margin: 0; background: var(--mint); border-radius: 4px 18px 18px 18px; padding: 10px 14px; font-size: 14px; line-height: 1.8; }
+  .chat .a p b { color: var(--green-dk); }
+  .ng { margin-top: 24px; background: rgba(255,255,255,.7); border-radius: var(--r); padding: 14px 16px; }
+  .ng .ttl { font-weight: 700; font-size: 13.5px; color: var(--green-dk); margin-bottom: 4px; }
+  .ng li { position: relative; padding-left: 14px; font-size: 13.5px; line-height: 1.8; }
+  .ng li::before { content: ""; position: absolute; left: 0; top: 11px; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+  /* ⑧ 60分と料金 */
+  .tbar { display: flex; height: 40px; border-radius: 999px; overflow: hidden; }
+  .tbar span { display: flex; align-items: center; justify-content: center; color: #fff; font-size: 12.5px; font-weight: 700; white-space: nowrap; overflow: hidden; }
+  .tbar span + span { border-left: 2px solid var(--bg); }
+  .c1 { background: #E6D3AE; } .c2 { background: var(--gold); } .c3 { background: var(--green); } .c4 { background: #A3C2B3; }
+  .tbar .c4 { color: var(--green-dk); }
+  .tscale { display: flex; justify-content: space-between; font-family: var(--lora); font-size: 11px; color: var(--sub); margin: 4px 6px 0; }
+  .legend { margin: 14px 0 28px; }
+  .legend li { display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: start; padding: 11px 0; }
+  .legend li + li { border-top: 1px dashed var(--line); }
+  .legend .sw { width: 12px; height: 12px; border-radius: 50%; margin-top: 8px; }
+  .legend b { display: block; font-size: 15px; color: var(--green-dk); }
+  .legend small { display: block; font-size: 13px; line-height: 1.7; color: var(--ink); word-break: auto-phrase; }
+  .legend small em { font-style: normal; color: var(--sub); }
+  .legend .min { font-family: var(--lora); font-size: 16px; color: var(--green-dk); line-height: 1.9; }
+  .legend .min small { display: inline; font-family: var(--body); font-size: 12px; }
+  .promise { margin: 18px 0 0; background: var(--white); border-radius: var(--r); padding: 16px; text-align: center; font-size: 14.5px; line-height: 1.85; box-shadow: 0 2px 12px rgba(61,55,50,.05); word-break: auto-phrase; }
+  .promise b { color: var(--green-dk); }
+  .hours { margin-top: 22px; background: var(--white); border-radius: var(--r); padding: 4px 16px; box-shadow: 0 2px 12px rgba(61,55,50,.05); }
+  .hours > div { display: grid; grid-template-columns: 5.4em 1fr; padding: 10px 0; font-size: 13.5px; line-height: 1.7; }
+  .hours > div + div { border-top: 1px dashed var(--line); }
+  .hours dt { color: var(--sub); font-size: 12.5px; }
+
+  /* ⑨ 受診のすすめ */
+  .warn { background: var(--white); border-radius: var(--r); padding: 20px 18px 18px; border: 1.5px solid rgba(61,55,50,.35); }
+  .warn h2 { font-size: 18px; color: var(--ink); text-align: center; margin-bottom: 8px; }
+  .warn > p { text-align: center; font-size: 13.5px; }
+  .warn ul { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 12px; }
+  .warn li { background: var(--bg); border-radius: 10px; padding: 6px 8px; font-size: 13px; line-height: 1.55; text-align: center; word-break: auto-phrase; }
+
+  /* ⑩ よくあるご質問 */
+  .faq-list { background: var(--white); border-radius: var(--r); padding: 4px 16px; box-shadow: 0 2px 12px rgba(61,55,50,.05); }
+  .faq-list details + details { border-top: 1px dashed var(--line); }
+  .faq-list summary { list-style: none; cursor: pointer; position: relative; padding: 14px 30px 14px 30px; font-weight: 700; font-size: 14.5px; line-height: 1.7; color: var(--green-dk); }
+  .faq-list summary::-webkit-details-marker { display: none; }
+  .faq-list summary::before { content: "Q"; position: absolute; left: 0; top: 13px; width: 22px; height: 22px; border-radius: 50%; background: var(--mint); color: var(--green); font-family: var(--lora); font-size: 12px; display: flex; align-items: center; justify-content: center; }
+  .faq-list summary::after { content: ""; position: absolute; right: 6px; top: 50%; width: 8px; height: 8px; margin-top: -6px; border-right: 2px solid var(--gold); border-bottom: 2px solid var(--gold); transform: rotate(45deg); transition: transform .2s; }
+  .faq-list details[open] summary::after { transform: rotate(-135deg); margin-top: -2px; }
+  .faq-list .a { padding: 0 6px 14px 30px; font-size: 14px; line-height: 1.85; }
+  .faq-list summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; border-radius: 8px; }
+
+  /* ⑪ LINE */
+  .phone { width: 262px; margin: 0 auto; border: 8px solid #2B2B2B; border-radius: 32px; overflow: hidden; background: #DCE6E0; box-shadow: 0 14px 30px rgba(34,71,60,.2); }
+  .ph-head { background: var(--green); color: #fff; font-size: 12px; font-weight: 700; padding: 12px 10px 9px; text-align: center; line-height: 1.4; }
+  .ph-body { padding: 14px 12px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .msg { position: relative; max-width: 88%; font-size: 12px; line-height: 1.65; padding: 8px 11px; border-radius: 14px; }
+  .msg.in { align-self: flex-start; background: #fff; border-top-left-radius: 4px; }
+  .msg.out { align-self: flex-end; background: #9BD68A; border-top-right-radius: 4px; }
+  .msg.wait { align-self: flex-start; border: 1px dashed var(--green); color: var(--green-dk); }
+  .access { margin-top: 40px; background: var(--white); border-radius: var(--r); padding: 20px 18px; box-shadow: 0 2px 12px rgba(61,55,50,.05); }
+  .access h3 { text-align: center; font-size: 17px; color: var(--green-dk); }
+  .route { margin: 10px 0 8px; counter-reset: r; }
+  .route li { counter-increment: r; position: relative; padding: 5px 0 5px 30px; font-size: 14px; line-height: 1.7; }
+  .route li::before { content: counter(r); position: absolute; left: 0; top: 8px; width: 21px; height: 21px; border-radius: 50%; background: var(--mint); color: var(--green); font-family: var(--lora); font-size: 11px; display: flex; align-items: center; justify-content: center; }
+
+  footer { background: var(--green-dk); color: rgba(255,255,255,.88); padding: 32px 22px 36px; text-align: center; font-size: 12.5px; line-height: 2; }
+  footer .fname { font-family: var(--head); font-weight: 700; font-size: 16px; letter-spacing: .14em; color: #fff; margin-bottom: 6px; }
+
+  /* ---------- 固定バー ---------- */
+  .sticky {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; max-width: 480px; margin: 0 auto;
+    display: grid; grid-template-columns: 40% 60%; align-items: center;
+    padding: 10px 12px calc(12px + env(safe-area-inset-bottom)); background: rgba(251,248,243,.97);
+    border-radius: 20px 20px 0 0; box-shadow: 0 -4px 18px rgba(34,71,60,.12);
+    transform: translateY(115%); transition: transform .25s ease;
+  }
+  .sticky.show { transform: translateY(0); }
+  .sticky .left { margin: 0; text-align: center; line-height: 1.45; }
+  .sticky .left .s1 { display: block; font-size: 11px; color: var(--sub); white-space: nowrap; }
+  .sticky .left .s2 { display: block; font-family: var(--head); font-weight: 700; font-size: 12.5px; color: var(--green-dk); white-space: nowrap; }
+  .sticky .left .s2 .en { font-size: 20px; font-weight: 500; }
+  .sticky .btn-line { min-height: 52px; font-size: 15px; padding: 8px 30px 8px 42px; box-shadow: 0 6px 14px rgba(46,93,79,.25); }
+  .sticky .btn-line .ico { left: 15px; width: 20px; height: 20px; margin-top: -10px; }
+  .sticky .btn-line::after { right: 16px; }
+  @media (prefers-reduced-motion: reduce) { .sticky, .btn-line, .faq-list summary::after { transition: none; } }
+  @media (min-width: 481px) { .page { box-shadow: 0 0 0 1px rgba(34,71,60,.06); } }
+
+  /* 字間・揃え（機械的に見えないように） */
+  .sec > h2 { letter-spacing: .03em; }
+  .fv-copy h1 { letter-spacing: .02em; }
+  .ask { letter-spacing: .03em; }
+  .lead { text-align: left; }
+  /* 院長の言葉は手書き風 */
+  .bub, .chat .a p { font-weight: 600; font-size: 14.5px; letter-spacing: 0; line-height: 1.85; }
+  .bub b, .chat .a p b { font-weight: 600; color: var(--green-dk); background: linear-gradient(transparent 62%, var(--marker) 62%); }
+
+  /* 写真の注釈（手書き風） */
+  .ann { position: relative; }
+  .ann img { width: 100%; height: auto; }
+  .draw { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; filter: drop-shadow(0 1px 2px rgba(0,0,0,.35)); }
+  .tag { position: absolute; transform: translate(-50%, -50%) rotate(var(--r, -4deg)); background: #FFE58A; color: #22473C; font-family: "Klee One", var(--body); font-weight: 600; font-size: 13.5px; letter-spacing: 0; line-height: 1.5; padding: 3px 10px; border-radius: 6px; white-space: nowrap; box-shadow: 0 2px 6px rgba(0,0,0,.18); }
+  .hand { font-family: "Klee One", var(--body); font-weight: 600; }
+  .day-chart { margin: 4px -6px 0; background: var(--white); border-radius: var(--r); padding: 16px 10px 8px; box-shadow: 0 2px 12px rgba(61,55,50,.05); }
+  .day-chart svg { display: block; width: 100%; height: auto; }
+  .day-chart svg text { font-family: var(--body); }
+  .day-chart svg text.hand { font-family: "Klee One", var(--body); font-weight: 600; }
+  .day-note { margin: 12px 0 0; font-size: 13.5px; line-height: 1.8; text-align: center; color: var(--sub); }
+  .room { margin: 20px 0 0; border-radius: 24px; overflow: hidden; }
+  .trust { margin: 0 0 12px; text-align: center; font-size: 13px; line-height: 1.7; color: var(--green-dk); font-weight: 700; }
+  .trust .en { font-size: 15px; }
+  .trust .soft { font-weight: 500; color: var(--ink); }
+  .fv-sheet .chips { flex-wrap: nowrap; gap: 6px; }
+  .fv-sheet .chips li { font-size: 12px; padding: 3px 10px; white-space: nowrap; }
+
+  /* 予約と相談の2つの入口 */
+  .two-way { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 12px 0 0; }
+  .two-way li { display: flex; align-items: center; gap: 8px; justify-content: center; font-size: 12px; line-height: 1.5; color: var(--sub); }
+  .two-way li + li { border-left: 1px dashed var(--line); }
+  .two-way b { color: var(--green-dk); font-size: 13px; }
+  .two-way .mi { flex: none; width: 30px; height: 30px; padding: 6px; border-radius: 50%; background: var(--mint); color: var(--green); }
+
+  /* ⑪ LINE：予約と相談の分かれ道 */
+  .fork-start { display: flex; justify-content: center; }
+  .fork-start span { display: inline-flex; align-items: center; gap: 8px; background: var(--green); color: #fff; font-weight: 700; font-size: 15px; border-radius: 999px; padding: 6px 20px 6px 8px; line-height: 1.5; box-shadow: 0 4px 12px rgba(46,93,79,.22); }
+  .fork-start .n { width: 26px; height: 26px; border-radius: 50%; background: #fff; color: var(--green); font-family: var(--lora); font-size: 14px; display: flex; align-items: center; justify-content: center; padding: 0; box-shadow: none; }
+  .fork-lines { display: block; width: 100%; height: 34px; }
+  .ways { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+  .way { text-align: center; }
+  .way .who { margin: 0; font-size: 12px; color: var(--sub); line-height: 1.5; }
+  .way .what { margin: 2px 0 10px; font-family: var(--head); font-weight: 700; font-size: 16.5px; color: var(--green-dk); line-height: 1.5; }
+  .way .after { margin: 10px 0 0; font-size: 12px; line-height: 1.6; color: var(--green-dk); font-weight: 700; word-break: auto-phrase; }
+  .phone.sm { width: 100%; border-width: 6px; border-radius: 24px; box-shadow: 0 10px 22px rgba(34,71,60,.18); text-align: left; }
+  .phone.sm .ph-head { font-size: 10.5px; padding: 9px 6px 7px; }
+  .ways { align-items: stretch; }
+  .way { display: flex; flex-direction: column; }
+  .phone.sm { flex: 1; display: flex; flex-direction: column; }
+  .phone.sm .ph-body { flex: 1; padding: 10px 8px 14px; gap: 8px; }
+  .phone.sm .msg.reply { display: grid; grid-template-columns: 22px 1fr; gap: 5px; align-items: start; align-self: stretch; background: none; padding: 0; max-width: 100%; }
+  .cal-lbl { margin: 0 0 -4px; font-size: 9.5px; color: var(--sub); line-height: 1.4; }
+  .msg.reply img { width: 22px; height: 22px; border-radius: 50%; object-fit: cover; }
+  .msg.reply span { font-family: var(--voice); font-weight: 600; background: #fff; border-radius: 4px 12px 12px 12px; padding: 6px 8px; }
+  .phone.sm .msg { font-size: 10.5px; line-height: 1.6; padding: 6px 8px; max-width: 94%; }
+  .cal-menu { background: #fff; border: 1.5px solid var(--green); border-radius: 8px; font-size: 10px; line-height: 1.4; padding: 5px 6px; color: var(--green-dk); font-weight: 700; text-align: center; }
+  .cal-week { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; background: #fff; border-radius: 8px; padding: 5px 3px; text-align: center; }
+  .cal-week span { font-size: 9px; line-height: 1.5; color: var(--sub); }
+  .cal-week i { display: block; font-style: normal; font-size: 11px; line-height: 1.4; color: var(--green); font-weight: 700; }
+  .cal-week .x i { color: #9E9488; }
+  .cal-week .on { background: var(--mint); border-radius: 5px; }
+  .cal-time { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+  .cal-time span { background: #fff; border: 1px solid #C9D3CD; border-radius: 6px; font-family: var(--lora); font-size: 10px; text-align: center; line-height: 1.9; }
+  .cal-time .on { background: var(--green); border-color: var(--green); color: #fff; }
+  .cal-go { background: var(--green); color: #fff; border-radius: 999px; font-size: 10.5px; font-weight: 700; text-align: center; line-height: 2.2; }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M12 3.5c5 0 9 3.2 9 7.2s-4 7.2-9 7.2c-.8 0-1.6-.1-2.3-.2L5.5 20l.9-3.3C4.3 15.4 3 13.2 3 10.7c0-4 4-7.2 9-7.2Z"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5"/><path d="M3.5 9.8h17M8 3v4M16 3v4"/><path d="M8.6 14.6l2.2 2.1 4.6-4.4"/></g></symbol>
+  <symbol id="wave" viewBox="0 0 390 28" preserveAspectRatio="none"><path d="M0 28V16C64 2 138 0 204 10s124 20 186 4V28Z" fill="currentColor"/></symbol>
+</svg>
+
+<div class="page">
+
+  <!-- ① ファーストビュー -->
+  <section class="fv">
+    <div class="fv-photo">
+      <img src="/katakori/images/fv.jpg" alt="院長が、肩ではなく頭とお腹に手を当てて体の状態を確かめている様子" width="704" height="792">
+      <svg class="draw" viewBox="0 0 704 792" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#FFD45C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"><path d="M528.6 487.8C523.7 488.6 509.2 492.2 499.4 493.0C489.5 493.9 478.9 494.0 469.6 492.8C460.3 491.6 451.5 489.0 443.7 486.0C435.9 483.1 429.1 479.3 423.1 475.2C417.1 471.1 410.7 466.7 407.7 461.5C404.7 456.4 404.9 450.1 405.0 444.4C405.1 438.8 406.6 433.1 408.4 427.5C410.3 421.9 412.0 416.1 416.1 410.8C420.2 405.6 426.9 400.8 433.0 396.0C439.1 391.2 445.1 386.1 452.6 382.1C460.1 378.0 469.0 374.6 478.0 371.5C486.9 368.5 496.6 365.3 506.4 363.6C516.2 362.0 526.7 361.7 536.7 361.6C546.8 361.5 557.5 361.6 566.9 363.2C576.3 364.8 585.7 367.5 593.1 371.0C600.4 374.6 606.1 379.5 610.9 384.4C615.6 389.3 619.6 394.7 621.6 400.3C623.6 405.9 623.9 412.0 622.8 417.8C621.6 423.7 617.7 429.5 614.6 435.2C611.6 440.8 609.0 446.6 604.2 451.9C599.4 457.1 592.8 462.1 585.9 466.7C578.9 471.3 571.1 475.5 562.7 479.2C554.3 482.9 545.1 485.9 535.5 488.7C526.0 491.6 515.6 495.0 505.4 496.3C495.2 497.5 484.3 497.1 474.2 496.4C464.0 495.7 449.5 492.6 444.6 491.9"/><path d="M22.7 650.1C25.3 648.6 32.7 643.3 38.5 641.0C44.4 638.8 51.1 637.5 57.7 636.8C64.3 636.1 71.6 635.8 78.1 637.1C84.7 638.3 91.1 641.6 97.2 644.5C103.2 647.4 109.2 650.5 114.2 654.5C119.2 658.4 124.0 663.1 127.3 668.0C130.6 672.9 132.4 678.7 134.0 684.1C135.6 689.4 137.1 695.0 136.9 700.3C136.8 705.5 134.7 710.7 133.2 715.7C131.7 720.8 130.6 726.0 128.0 730.6C125.4 735.2 121.6 739.5 117.7 743.5C113.7 747.6 109.4 751.7 104.2 754.8C99.0 757.9 92.9 760.7 86.6 762.3C80.3 763.8 73.2 764.0 66.4 763.9C59.6 763.8 52.4 763.2 45.8 761.5C39.1 759.8 32.6 756.8 26.7 753.6C20.8 750.3 14.8 746.5 10.3 741.9C5.8 737.4 2.3 731.8 -0.2 726.4C-2.6 721.0 -3.3 715.2 -4.4 709.7C-5.4 704.2 -6.8 698.6 -6.3 693.3C-5.8 687.9 -3.2 682.9 -1.2 677.8C0.8 672.7 2.4 667.3 5.6 662.8C8.8 658.3 13.5 654.4 18.2 650.8C22.9 647.2 28.3 644.0 34.0 641.2C39.8 638.4 46.1 635.0 52.7 633.9C59.4 632.8 70.4 634.5 74.0 634.6"/></g></svg><span class="tag" style="left:83.1%;top:65.7%;--r:-5deg">お腹も</span><span class="tag" style="left:21.3%;top:77.3%;--r:4deg">頭も</span>
+      <div class="fv-head"><span class="name">博多<span class="en">Hakase</span>鍼灸整体院</span><span>博多駅 筑紫口 徒歩3分</span></div>
+      <div class="fv-copy">
+        <h1><span>その肩こり、</span><br><span>揉む場所が</span><br><span>違うのかもしれません。</span></h1>
+        <p class="sub">目・頭・お腹まで見て、<br>鍼と整体を使い分けます。</p>
+      </div>
+    </div>
+    <div class="fv-sheet">
+      <p class="trust">鍼灸師歴<span class="en">18</span>年・国家資格の院長が担当します。<br><span class="soft">鍼が苦手なら、整体だけでも受けられます。</span></p>
+      <div class="price">
+        <span class="first">はじめての方</span>
+        <p class="row"><span class="lbl">初回60分</span><span class="num">9,800</span><span class="yen">円</span><span class="tax">（税込）</span></p>
+        <p class="inc"><b>検査・鍼・整体・お灸まで込み</b>／追加料金なし</p>
+      </div>
+      <div class="cta" style="margin-top:16px">
+        <a class="btn-line" data-line data-cta="fv" href="#line"><svg class="ico"><use href="#i-chat"/></svg>LINEで予約・相談する</a>
+        <ul class="two-way">
+          <li><svg class="mi"><use href="#i-cal"/></svg><span>空いている日は<br><b>カレンダーで予約</b></span></li>
+          <li><svg class="mi"><use href="#i-chat"/></svg><span>迷っていたら<br><b>院長本人に相談</b></span></li>
+        </ul>
+      </div>
+      <ul class="chips">
+        <li>個室・着替え不要</li><li>20時以降も相談可</li><li>無理な勧誘なし</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ② よくある1日 -->
+  <section class="sec">
+    <h2>朝から重くて、<br>夕方には頭まで痛い。</h2>
+    <div class="day-chart"><svg viewBox="0 0 346 250" role="img" aria-label="朝から夕方につらさが増し、マッサージで軽くなっても数日で元に戻るグラフ"><g stroke="#E6DED0" stroke-width="1"><path d="M14 30H340" stroke-dasharray="2 5"/><path d="M14 64H340" stroke-dasharray="2 5"/><path d="M14 98H340" stroke-dasharray="2 5"/><path d="M14 132H340" stroke-dasharray="2 5"/><path d="M14 166H340" stroke-dasharray="2 5"/></g><path d="M14 18V205H342" fill="none" stroke="#B9AE9F" stroke-width="1.4" stroke-linecap="round"/><text x="20" y="16" font-size="11.5" fill="#7C736B" class="hand">つらい</text><path d="M34.0 127.1C35.9 127.0 41.8 127.6 45.7 126.5C49.6 125.5 53.4 123.1 57.3 120.9C61.2 118.6 65.1 115.6 69.0 112.9C72.9 110.2 76.8 106.7 80.7 104.7C84.6 102.7 88.4 101.8 92.3 100.8C96.2 99.9 100.1 99.8 104.0 98.9C107.9 97.9 111.8 97.0 115.7 95.0C119.6 92.9 123.4 90.0 127.3 86.5C131.2 83.1 135.1 78.3 139.0 74.3C142.9 70.2 146.8 65.4 150.7 62.1C154.6 58.9 158.4 56.4 162.3 54.7C166.2 53.1 170.1 51.6 174.0 52.2C177.9 52.9 182.0 53.7 186.0 58.8C190.0 63.9 194.0 74.1 198.0 82.8C202.0 91.6 206.0 101.5 210.0 111.3C214.0 121.0 218.0 132.7 222.0 141.3C226.0 149.8 230.0 157.3 234.0 162.7C238.0 168.0 242.0 173.0 246.0 173.4" fill="none" stroke="#2E5D4F" stroke-width="3.4" stroke-linecap="round"/><path d="M246.0 173.4C248.0 172.0 254.0 169.9 258.0 165.2C262.0 160.4 266.0 153.2 270.0 145.1C274.0 136.9 278.0 126.1 282.0 116.3C286.0 106.6 290.0 94.9 294.0 86.7C298.0 78.5 302.0 71.5 306.0 67.0C310.0 62.6 316.0 61.2 318.0 60.0" fill="none" stroke="#D08A4E" stroke-width="3.4" stroke-linecap="round" stroke-dasharray="1 7"/><circle cx="34" cy="128" r="6" fill="#fff" stroke="#2E5D4F" stroke-width="3"/><circle cx="104" cy="98" r="6" fill="#fff" stroke="#2E5D4F" stroke-width="3"/><circle cx="174" cy="52" r="6" fill="#fff" stroke="#2E5D4F" stroke-width="3"/><circle cx="246" cy="172" r="6" fill="#fff" stroke="#8DB09F" stroke-width="3"/><circle cx="318" cy="60" r="6" fill="#fff" stroke="#D08A4E" stroke-width="3"/><text x="28" y="154" text-anchor="start" font-size="13" fill="#22473C" class="hand">首が重い</text><text x="112" y="124" text-anchor="start" font-size="13" fill="#22473C" class="hand">肩が上がる</text><text x="174" y="36" text-anchor="middle" font-size="13" fill="#22473C" class="hand">目の奥が痛い</text><text x="246" y="198" text-anchor="middle" font-size="13" fill="#22473C" class="hand">その日は軽い</text><text x="314" y="44" text-anchor="middle" font-size="13" fill="#22473C" class="hand">元どおり</text><text x="34" y="226" text-anchor="middle" font-size="12" fill="#7C736B">朝</text><text x="104" y="226" text-anchor="middle" font-size="12" fill="#7C736B">昼</text><text x="174" y="226" text-anchor="middle" font-size="12" fill="#7C736B">夕方</text><text x="246" y="226" text-anchor="middle" font-size="12" fill="#7C736B">帰り道</text><text x="318" y="226" text-anchor="middle" font-size="12" fill="#7C736B">数日後</text><path d="M210.0 150.0Q219.2 166.4 238.0 166.0M231.2 170.1L238.0 166.0L231.0 162.1" fill="none" stroke="#C29A5B" stroke-width="1.6" stroke-linecap="round"/><text x="206" y="146" text-anchor="end" font-size="12" fill="#86622D" class="hand">マッサージ</text></svg></div>
+    <p class="day-note">夕方には目の奥まで痛くなり、頭痛薬を飲む。<br>帰りにマッサージで軽くなっても、数日で元どおり。</p>
+    <p class="ask"><span class="mk">このくり返し、</span><br><span class="mk">何年目ですか。</span></p>
+    <div class="cta">
+      <a class="btn-line" data-line data-cta="after-day" href="#line"><svg class="ico"><use href="#i-chat"/></svg>まず肩の状態をLINEで伝える</a>
+      <p class="btn-note">返信は院長本人です。</p>
+    </div>
+  </section>
+
+  <!-- ③ なぜ戻るのか -->
+  <section class="sec beige">
+    <svg class="wave"><use href="#wave"/></svg>
+    <h2>揉むと楽なのに、<br>なぜ戻るのか</h2>
+    <p class="lead ap">揉むと、硬くなった筋肉は一時的にゆるみます。<br>でも、肩に力を入れさせている「元」が<br>そのままだと、また同じところに力が入ります。</p>
+
+    <p class="chain-title">デスクワークの方に多い流れ</p>
+    <ol class="chain">
+      <li><span class="blob">目</span><div><b>画面を見続ける</b><p>目のまわりから、頭が張ってくる</p></div></li>
+      <li><span class="blob">頭</span><div><b>頭が前に出る</b><p>約5kgの頭を、首と肩が支え続ける</p></div></li>
+      <li class="end"><span class="blob">肩</span><div><b>肩に力が入りっぱなし</b><p>揉んでも、また同じところに力が入る</p></div></li>
+    </ol>
+    <p class="aside">お腹の硬さや不調が、体の緊張につながっていることもあります。</p>
+
+    <div class="voice">
+      <img src="/katakori/images/inchou-face.jpg" alt="" width="200" height="200">
+      <p class="bub"><span class="who">院長 小川</span>私がよく話す「自律神経」は、<b>体が緊張したまま戻らない状態</b>のことです。だから肩だけでなく、目・頭・お腹まで見ます。</p>
+    </div>
+
+    <figure class="concept ann">
+      <img src="/katakori/images/kensa.jpg" alt="検査でお腹の硬さを確かめている様子" width="704" height="880" loading="lazy">
+      <svg class="draw" viewBox="0 0 704 880" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#FFD45C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"><path d="M173.0 776.7C169.2 775.7 157.7 773.0 150.3 770.6C143.0 768.2 134.9 765.9 128.6 762.3C122.3 758.6 116.7 753.9 112.5 748.7C108.4 743.6 105.5 737.7 103.5 731.6C101.5 725.6 99.6 718.9 100.6 712.5C101.6 706.1 105.5 699.4 109.3 693.2C113.1 686.9 117.6 680.5 123.7 675.2C129.7 669.9 138.0 665.5 145.8 661.6C153.5 657.7 162.0 654.5 170.4 651.9C178.8 649.3 187.5 647.2 196.2 645.9C204.9 644.6 214.1 643.5 222.5 643.9C231.0 644.3 239.1 646.3 247.0 648.1C255.0 649.9 262.9 651.8 270.2 654.7C277.5 657.5 284.9 660.9 291.0 665.1C297.0 669.4 302.9 674.5 306.4 680.2C310.0 685.9 311.8 692.7 312.4 699.2C312.9 705.7 311.8 712.7 309.8 719.4C307.8 726.1 305.4 733.4 300.3 739.4C295.3 745.4 286.7 750.5 279.6 755.5C272.4 760.5 265.6 766.0 257.3 769.5C249.1 773.1 239.3 775.0 230.3 776.8C221.3 778.6 212.3 779.8 203.4 780.3C194.6 780.8 185.8 780.6 177.2 779.8C168.6 779.1 160.1 777.8 152.0 775.8C143.8 773.8 135.0 771.5 128.3 767.9C121.5 764.2 114.2 756.2 111.3 753.8"/><path d="M420.0 600.0Q373.6 658.0 300.0 668.0M317.5 654.5L300.0 668.0L320.4 676.4"/></g></svg><span class="tag" style="left:71.0%;top:66.5%;--r:-4deg">お腹の硬さもチェック</span>
+      <figcaption><span>症状がいくつあっても、</span><span>身体はひとつ。</span><br><span>だから、すべてまとめてみます。</span></figcaption>
+    </figure>
+  </section>
+
+  <!-- ④ 鍼と整体の使い分け -->
+  <section class="sec">
+    <svg class="wave flip"><use href="#wave"/></svg>
+    <h2>鍼か整体か、<br>迷わなくていい。</h2>
+    <p class="lead ap">関節の動き、お腹の硬さ、体の歪み、姿勢を検査して、見つかった理由に合わせて組み合わせを決めます。</p>
+    <figure class="photo-r ann" style="margin-top:20px">
+      <img src="/katakori/images/seitai.jpg" alt="首と肩の状態を手で確かめている様子" width="704" height="880" loading="lazy">
+      <svg class="draw" viewBox="0 0 704 880" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#FFD45C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"><path d="M182.8 511.4C183.2 507.8 183.6 496.9 185.2 490.0C186.7 483.2 189.1 476.6 192.2 470.4C195.4 464.3 199.3 458.4 204.1 453.3C208.8 448.2 214.7 444.0 220.6 439.9C226.4 435.8 232.4 431.6 239.2 428.6C246.0 425.6 253.5 423.2 261.3 421.8C269.0 420.4 277.5 419.3 285.5 420.2C293.5 421.0 301.6 423.8 309.3 426.7C316.9 429.6 325.0 432.9 331.4 437.6C337.9 442.3 343.3 448.7 348.2 454.9C353.0 461.1 357.9 467.8 360.4 474.8C362.9 481.9 363.7 489.9 363.3 497.1C362.9 504.3 360.0 511.3 357.9 518.2C355.8 525.0 354.3 532.1 350.8 538.2C347.2 544.2 342.0 549.9 336.6 554.7C331.2 559.6 324.8 563.8 318.2 567.5C311.7 571.1 304.6 574.6 297.2 576.8C289.7 579.0 281.5 580.0 273.4 580.4C265.3 580.7 256.9 580.3 248.7 578.9C240.5 577.5 231.5 575.8 224.0 572.2C216.5 568.7 209.8 562.9 203.9 557.3C198.0 551.7 192.5 545.2 188.6 538.5C184.7 531.7 181.9 524.0 180.6 516.6C179.4 509.2 179.9 501.5 180.8 494.3C181.7 487.0 183.1 479.7 185.9 473.1C188.7 466.4 195.6 457.6 197.5 454.5"/><path d="M605.8 488.3C602.4 488.1 591.8 488.9 585.2 486.6C578.7 484.4 572.2 479.5 566.5 474.8C560.7 470.0 555.1 464.5 550.6 458.1C546.1 451.8 542.4 444.2 539.4 436.8C536.4 429.4 534.3 421.4 532.7 413.5C531.1 405.6 529.6 397.4 529.6 389.5C529.7 381.6 531.6 373.9 533.0 366.2C534.5 358.5 535.7 350.5 538.4 343.5C541.1 336.4 545.1 329.9 549.3 323.9C553.5 317.9 558.2 312.0 563.6 307.5C569.1 302.9 575.3 299.1 581.7 296.7C588.2 294.2 595.4 292.3 602.3 292.6C609.2 293.0 616.6 295.3 623.1 298.8C629.6 302.3 635.6 307.9 641.1 313.5C646.6 319.1 651.9 325.2 656.0 332.2C660.0 339.1 662.8 347.4 665.5 355.2C668.1 363.1 670.8 371.2 671.9 379.3C673.0 387.5 672.7 396.1 672.1 404.3C671.5 412.5 670.2 420.6 668.2 428.4C666.2 436.1 663.6 443.9 660.1 450.9C656.7 457.8 652.3 464.4 647.5 470.2C642.6 475.9 637.1 481.6 630.9 485.4C624.8 489.2 617.7 492.0 610.7 492.9C603.8 493.9 596.3 492.6 589.3 491.0C582.2 489.5 574.6 487.7 568.2 483.6C561.8 479.5 553.7 469.3 550.9 466.4"/><path d="M250.0 690.0Q279.8 645.5 262.0 595.0M273.6 605.0L262.0 595.0L259.2 610.1"/></g></svg><span class="tag" style="left:35.5%;top:82.7%;--r:-3deg">首まわりも、手で確かめます</span>
+    </figure>
+    <ul class="match">
+      <li><span class="why">姿勢の崩れ、体の歪み</span><span class="w">整体</span></li>
+      <li><span class="why">強い硬さ、抜けない緊張</span><span class="w">鍼</span></li>
+      <li><span class="why">お腹が姿勢に関わっている</span><span class="w">お腹にも鍼</span></li>
+    </ul>
+    <p class="note center" style="margin-top:14px">鍼は、指では届きにくいところにも届きます。<br>苦手な方は、整体だけでも受けられます。</p>
+  </section>
+
+  <!-- ⑤ 院長紹介 -->
+  <section class="sec mint">
+    <svg class="wave"><use href="#wave"/></svg>
+    <div class="prof-photo">
+      <div class="ann" style="position:relative">
+      <img src="/katakori/images/inchou.jpg" alt="施術中の院長 小川雅人" width="896" height="1120" loading="lazy">
+      <svg class="draw" viewBox="0 0 896 1120" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#FFD45C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"><path d="M215.0 255.0Q275.0 175.0 375.0 175.0M350.2 189.3L375.0 175.0L350.2 160.7"/><path d="M359.6 493.1C360.4 490.4 362.5 482.0 364.7 476.4C367.0 470.8 368.8 464.9 372.9 459.5C376.9 454.2 382.6 449.0 388.9 444.4C395.2 439.9 402.8 435.5 410.8 432.5C418.8 429.5 428.2 427.5 437.1 426.2C445.9 424.9 455.3 424.5 464.1 424.8C472.9 425.2 481.9 426.3 489.9 428.2C498.0 430.2 506.0 433.0 512.3 436.6C518.7 440.2 523.4 445.3 527.9 449.9C532.4 454.5 536.7 459.3 539.4 464.4C542.2 469.5 543.3 475.1 544.4 480.7C545.5 486.2 546.7 491.9 546.0 497.7C545.3 503.4 543.6 509.5 540.4 515.2C537.2 520.8 532.0 526.1 526.8 531.3C521.6 536.5 516.2 542.5 509.1 546.5C501.9 550.6 492.4 552.9 483.6 555.5C474.9 558.1 465.7 561.1 456.5 562.1C447.3 563.1 437.2 562.9 428.4 561.6C419.7 560.2 411.7 556.8 404.0 553.9C396.4 551.0 388.7 548.0 382.7 544.0C376.8 540.0 372.3 534.8 368.2 529.9C364.1 524.9 360.0 519.8 358.0 514.3C356.1 508.8 356.7 502.7 356.6 496.9C356.6 491.1 356.4 485.2 357.9 479.3C359.4 473.4 361.7 467.1 365.7 461.4C369.6 455.7 378.9 447.9 381.6 445.3"/><path d="M640.0 655.0Q609.0 587.5 540.0 560.0M561.8 556.8L540.0 560.0L553.7 577.3"/></g></svg><span class="tag" style="left:19.0%;top:26.8%;--r:-4deg">院長の小川です</span><span class="tag" style="left:75.9%;top:62.5%;--r:3deg">関節の動きもチェック</span>
+      </div>
+    </div>
+    <h2>整骨院に通っても、<br>変わらなかった。<br>私自身がそうでした。</h2>
+    <div class="story">
+      <p>通っても変わらない痛みと、目が小さくなったと感じるほどの眼精疲労。それが、いろいろな症状を学ぶようになったきっかけです。</p>
+      <p>整骨院ではケガや肩こり・腰痛の施術を、整体院ではカイロプラクティックと整体を学びました。鍼と整体の両方を使えるのは、そのためです。</p>
+      <div class="nots">
+        <p class="ttl">私がしないこと</p>
+        <ul class="chips"><li>痛い施術</li><li>危険な施術</li><li>望まれていない施術</li></ul>
+      </div>
+      <p class="em">4人の子どもの父親です。<br>LINEの返信も施術も、<br>私ひとりで担当しています。</p>
+    </div>
+    <p class="sig">
+      <span class="q">はり師・きゅう師（国家資格）　鍼灸師歴<span class="en">18</span>年</span>
+      <span class="nm">小川雅人</span>
+    </p>
+    <div class="cta">
+      <a class="btn-line" data-line data-cta="after-profile" href="#line"><svg class="ico"><use href="#i-chat"/></svg>院長に直接LINEで聞いてみる</a>
+      <p class="btn-note">返信は院長本人です。</p>
+    </div>
+  </section>
+
+  <!-- ⑥ 何回くらいで変わるのか -->
+  <section class="sec">
+    <svg class="wave flip"><use href="#wave"/></svg>
+    <h2>何回くらいで変わるのか</h2>
+    <div class="flow2">
+      <div class="st"><span class="lbl">初回</span><p>その場で、痛みや動きの変化を感じる方が多い</p></div>
+      <span class="ar" aria-hidden="true"></span>
+      <div class="st"><span class="lbl">回数を重ねると</span><p>変わった状態が続くようになる</p></div>
+    </div>
+    <p class="note center" style="margin-top:12px">通う間隔は、初回に体を見てからご説明します。<br>期間や回数は人によって違います。</p>
+    <div class="headache">
+      <p class="ttl">頭痛もある方へ</p>
+      <ul>
+        <li>最近出てきた頭痛なら、1回のあと1週間ほど出ない方が多いです。</li>
+        <li>何年も続く頭痛は、半分ほどの方が2日後くらいから戻り始めます。</li>
+      </ul>
+    </div>
+    <div class="case">
+      <h3>首と肩の張りで来られた方</h3>
+      <p class="who">30代女性・会社員</p>
+      <ol class="cflow">
+        <li><span class="k">検査</span><p>頭のこりと、お腹まわりの不調。緊張が抜けにくい状態でした</p></li>
+        <li><span class="k">施術</span><p>首と肩だけでなく、頭とお腹も</p></li>
+        <li><span class="k">変化</span><p>1回目から楽に。3回目からは、楽な状態が長く続くように</p></li>
+      </ol>
+      <p class="note center">感じ方には個人差があります。</p>
+    </div>
+    <!-- 男性の実例が届いたら、上の .case をもう1つ複製してここに追加 -->
+  </section>
+
+  <!-- ⑦ 鍼が初めての方へ -->
+  <section class="sec beige">
+    <svg class="wave"><use href="#wave"/></svg>
+    <h2>鍼が初めての方へ</h2>
+    <div class="chat">
+      <p class="q">鍼って、痛くないですか？</p>
+      <div class="a"><img src="/katakori/images/inchou-face.jpg" alt="" width="200" height="200"><p><b>「蚊に刺されたくらい」</b>と言われることが多いです。髪の毛より細い鍼から、その日の状態に合わせて選びます。</p></div>
+      <p class="q">衛生面が気になります。</p>
+      <div class="a"><img src="/katakori/images/inchou-face.jpg" alt="" width="200" height="200"><p>鍼はすべて使い捨てです。消毒も、しみにくい塩素系の薬剤を使っています。</p></div>
+      <p class="q">内出血はしますか？</p>
+      <div class="a"><img src="/katakori/images/inchou-face.jpg" alt="" width="200" height="200"><p>100人に5人ほどです。出た場合も、10〜14日ほどで引きます。</p></div>
+      <p class="q">それでも、鍼がこわいです。</p>
+      <div class="a"><img src="/katakori/images/inchou-face.jpg" alt="" width="200" height="200"><p>刺さない鍼、お灸、整体だけでもできます。整体だけだと、変化に時間がかかることはあります。</p></div>
+    </div>
+    <div class="ng">
+      <p class="ttl">受けない方がいい日</p>
+      <ul><li>お酒を飲む日、飲んだ後</li><li>初めての鍼で、寝不足と水分不足が重なる日</li></ul>
+    </div>
+    <figure class="room ann">
+      <img src="/katakori/images/room.jpg" alt="施術を行う個室の様子" width="704" height="880" loading="lazy">
+      <svg class="draw" viewBox="0 0 704 880" preserveAspectRatio="none" aria-hidden="true"><g fill="none" stroke="#FFD45C" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" vector-effect="non-scaling-stroke"><path d="M330.0 230.0Q248.0 232.0 190.0 290.0M196.3 266.5L190.0 290.0L213.5 283.7"/><path d="M470.0 560.0Q418.0 633.0 330.0 650.0M350.1 632.6L330.0 650.0L355.2 658.7"/></g></svg><span class="tag" style="left:62.5%;top:22.2%;--r:-4deg">施術は個室です</span><span class="tag" style="left:76.7%;top:59.1%;--r:3deg">着替えなしでOK</span>
+    </figure>
+  </section>
+
+  <!-- ⑧ 初回の60分と料金 -->
+  <section class="sec">
+    <svg class="wave flip"><use href="#wave"/></svg>
+    <h2>初回の60分で、<br>分かること・変わること</h2>
+    <div class="tbar" role="img" aria-label="60分の内訳：カウンセリング5分、検査5分、施術40分、説明10分">
+      <span class="c1" style="flex:5"></span><span class="c2" style="flex:5"></span><span class="c3" style="flex:40">施術 40分</span><span class="c4" style="flex:10">10分</span>
+    </div>
+    <div class="tscale" aria-hidden="true"><span>0</span><span>60 min</span></div>
+    <ol class="legend">
+      <li><span class="sw c1"></span><span><b>カウンセリング</b><small>今のつらさを伺います</small></span><span class="min">5<small>分</small></span></li>
+      <li><span class="sw c2"></span><span><b>検査</b><small>肩のほかに、どこが関わっているかが分かる<br><em>関節・お腹・歪み・姿勢</em></small></span><span class="min">5<small>分</small></span></li>
+      <li><span class="sw c3"></span><span><b>施術</b><small>その場で変化を感じる方が多い<br><em>鍼・お灸・整体を組み合わせる</em></small></span><span class="min">40<small>分</small></span></li>
+      <li><span class="sw c4"></span><span><b>説明</b><small>通い方の目安と、家でできることが分かる</small></span><span class="min">10<small>分</small></span></li>
+    </ol>
+    <div class="price">
+      <span class="first">はじめての方</span>
+      <p class="row"><span class="lbl">初回60分</span><span class="num">9,800</span><span class="yen">円</span><span class="tax">（税込）</span></p>
+      <p class="inc"><b>検査・鍼・整体・お灸まで込み</b>／追加料金なし<br>保険は使えない自費の施術です</p>
+    </div>
+    <p class="promise"><b>2回目以降は、初回にご説明します。</b><br>その場で決めていただく必要はありません。<br>無理に予約をすすめることもありません。</p>
+    <dl class="hours">
+      <div><dt>予約</dt><dd>LINEの予約カレンダーから</dd></div>
+      <div><dt>受付</dt><dd><span class="en">10:30–20:00</span></dd></div>
+      <div><dt>20時以降</dt><dd>事前にご連絡いただければ22時まで</dd></div>
+      <div><dt>お休み</dt><dd>土曜はお休みが多いです。お盆・年末年始は休業</dd></div>
+      <div><dt>空きやすい</dt><dd>平日の昼</dd></div>
+    </dl>
+    <div class="cta">
+      <a class="btn-line" data-line data-book data-cta="after-price" href="#line"><svg class="ico"><use href="#i-cal"/></svg>LINEで空いている日を見る</a>
+      <p class="btn-note">LINEの予約カレンダーから、そのまま予約できます。</p>
+    </div>
+  </section>
+
+  <!-- ⑨ 先に病院へ -->
+  <section class="sec beige">
+    <svg class="wave"><use href="#wave"/></svg>
+    <div class="warn">
+      <h2>先に病院へ行ってほしい頭痛</h2>
+      <p>次のような頭痛は、施術より先に医療機関を受診してください。</p>
+      <ul>
+        <li>殴られたような強い痛み</li><li>急に始まった痛み</li>
+        <li>意識がもうろうとする</li><li>手足のしびれ</li>
+        <li>ろれつが回らない</li><li>上を向けない</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ⑩ よくあるご質問 -->
+  <section class="sec">
+    <svg class="wave flip"><use href="#wave"/></svg>
+    <h2>よくあるご質問</h2>
+    <div class="faq-list">
+      <details open><summary>男性でも受けられますか</summary><div class="a">肩こりで来られる方の半分は男性です。</div></details>
+      <details><summary>前に鍼で変わらなかったのですが</summary><div class="a">鍼だけでなく、検査で見つかった理由に合わせて整体も組み合わせます。肩だけでなく、目・頭・お腹まで見るのが当院のやり方です。</div></details>
+      <details><summary>美容鍼のお店ではないのですか</summary><div class="a">美容鍼もしていますが、肩こり・頭痛・腰痛・姿勢などでも来ていただける鍼灸院です。</div></details>
+      <details><summary>シャツのままで受けられますか</summary><div class="a">着替えは不要です。シャツのままで首・肩に鍼ができます。</div></details>
+      <details><summary>保険は使えますか</summary><div class="a">使えません。自費の施術です。初回は9,800円（税込）で、追加料金はかかりません。</div></details>
+      <details><summary>仕事帰りでも間に合いますか</summary><div class="a">20時以降も、事前にLINEでご連絡いただければ22時まで対応します。</div></details>
+      <details><summary>当日お風呂に入ってもいいですか</summary><div class="a">入って大丈夫です。</div></details>
+      <details><summary>予約の前に相談できますか</summary><div class="a">LINEでできます。返信は院長本人です。日にちが決まっている方は、LINEの予約カレンダーからそのまま予約できます。</div></details>
+    </div>
+  </section>
+
+  <!-- ⑪ LINEでやること -->
+  <section class="sec mint" id="line-steps">
+    <svg class="wave"><use href="#wave"/></svg>
+    <h2>LINEで、<br>予約も相談もできます</h2>
+    <p class="fork-start"><span><span class="n">1</span>友だち追加</span></p>
+    <svg class="fork-lines" viewBox="0 0 346 34" preserveAspectRatio="none" aria-hidden="true"><path d="M173 0V10Q173 16 165 16H95Q87 16 87 24V34M173 10Q173 16 181 16H251Q259 16 259 24V34" fill="none" stroke="#C29A5B" stroke-width="2" stroke-dasharray="2 5" stroke-linecap="round" vector-effect="non-scaling-stroke"/></svg>
+    <div class="ways">
+      <div class="way">
+        <p class="who">日にちが決まっている方</p>
+        <p class="what">カレンダーで予約</p>
+        <div class="phone sm" role="img" aria-label="LINEの予約カレンダーで、メニューと日時を選ぶ画面のイメージ">
+          <div class="ph-head">予約カレンダー</div>
+          <div class="ph-body">
+            <div class="cal-menu">初回60分 9,800円</div>
+            <p class="cal-lbl">日にちを選ぶ</p>
+            <div class="cal-week"><span>月<i>○</i></span><span>火<i>○</i></span><span class="on">水<i>○</i></span><span>木<i>△</i></span><span>金<i>○</i></span><span class="x">土<i>×</i></span><span>日<i>○</i></span></div>
+            <p class="cal-lbl">時間を選ぶ</p>
+            <div class="cal-time"><span>10:30</span><span>14:00</span><span class="on">19:00</span></div>
+            <div class="cal-go">この日時で予約する</div>
+          </div>
+        </div>
+        <p class="after">空いている日時を<br>選ぶだけ</p>
+      </div>
+      <div class="way">
+        <p class="who">まだ迷っている方</p>
+        <p class="what">院長に相談</p>
+        <div class="phone sm" role="img" aria-label="LINEで院長に相談するやりとりのイメージ">
+          <div class="ph-head">博多<span class="en">Hakase</span>鍼灸整体院</div>
+          <div class="ph-body">
+            <div class="msg out">夕方になると頭痛が出ます。鍼は初めてでも大丈夫ですか。</div>
+            <div class="msg in reply"><img src="/katakori/images/inchou-face.jpg" alt="" width="200" height="200" loading="lazy"><span>髪の毛より細い鍼から選びます。苦手なら整体だけでもできますよ。</span></div>
+          </div>
+        </div>
+        <p class="after">返信は<br>院長本人です</p>
+      </div>
+    </div>
+    <p class="note center" style="margin-top:14px">画面はイメージです。</p>
+    <div class="cta" style="margin-top:22px">
+      <a class="btn-line" data-line data-cta="final" href="#line"><svg class="ico"><use href="#i-chat"/></svg>LINEで予約・相談する</a>
+      <p class="btn-note">予約しなくても、相談だけで大丈夫です。</p>
+    </div>
+    <div class="access">
+      <h3>アクセス</h3>
+      <p class="note center" style="margin:2px 0 0">博多駅 筑紫口から徒歩3分</p>
+      <ol class="route">
+        <li>筑紫口の交差点を左へ</li>
+        <li>スギ薬局の大きな看板があるビル</li>
+        <li>小学校との間の路地に入って、すぐ左が入口（エレベーターあり）</li>
+      </ol>
+      <p class="note">周辺にコインパーキングがあります。</p>
+    </div>
+  </section>
+
+  <footer>
+    <p class="fname">博多<span class="en">Hakase</span>鍼灸整体院</p>
+    <p>福岡市博多区博多駅東（博多駅筑紫口 徒歩3分）<br>はり師・きゅう師 小川雅人<br>受付 10:30〜20:00（20時以降は事前連絡で22時まで）</p>
+  </footer>
+</div>
+
+<div class="sticky" aria-hidden="true">
+  <p class="left"><span class="s1">相談だけでもOK</span><span class="s2">初回60分 <span class="en">9,800</span>円</span></p>
+  <a class="btn-line" data-line data-cta="sticky" href="#line" tabindex="-1"><svg class="ico"><use href="#i-chat"/></svg>LINEで予約・相談</a>
+</div>
+
+<script>
+(function () {
+  // LINEボタンのリンク先をまとめて設定
+  // data-book が付いたボタンは、予約カレンダーのURL（BOOK_URL）があればそちらへ
+  document.querySelectorAll("[data-line]").forEach(function (a) {
+    var toBook = a.hasAttribute("data-book") && window.BOOK_URL;
+    a.href = toBook ? window.BOOK_URL : window.LINE_URL;
+    a.target = "_blank";
+    a.rel = "noopener";
+    a.addEventListener("click", function () {
+      var params = { cta_position: a.getAttribute("data-cta"), cta_type: toBook ? "book" : "line" };
+      if (typeof window.gtag === "function") window.gtag("event", "line_click", params);   // GA4
+      if (typeof window.fbq === "function") window.fbq("track", "Contact", params);       // Meta Pixel
+    });
+  });
+
+  // 固定バー：FVのボタンが画面から消えたら出す。最後のボタンが見えている間は隠す
+  var sticky = document.querySelector(".sticky");
+  var fvBtn = document.querySelector('[data-cta="fv"]');
+  var finalBtn = document.querySelector('[data-cta="final"]');
+  var fvOut = false, finalIn = false;
+  function update() {
+    var show = fvOut && !finalIn;
+    sticky.classList.toggle("show", show);
+    sticky.setAttribute("aria-hidden", show ? "false" : "true");
+    sticky.querySelector("a").tabIndex = show ? 0 : -1;
+  }
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (e) { fvOut = !e[0].isIntersecting && e[0].boundingClientRect.top < 0; update(); }).observe(fvBtn);
+    new IntersectionObserver(function (e) { finalIn = e[0].isIntersecting; update(); }).observe(finalBtn);
+  } else { fvOut = true; update(); }
+})();
+</script>
+</body>
+</html>

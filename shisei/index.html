@@ -142,7 +142,7 @@
   .cause .big .gold { color: var(--gold2); }
   .cause .big small { display: block; font-size: 20px; color: var(--ink); }
   .cause-photo { position: relative; margin-top: 26px; }
-  .cause-body { position: relative; margin: -46px 18px 0; background: var(--base); padding: 26px 20px 26px; }
+  .cause-body { position: relative; margin: 0 18px; background: var(--base); padding: 26px 20px 26px; }
   .cause-body p + p { margin-top: 1em; }
   .cause-body .lead { font-family: var(--serif); font-weight: 600; font-size: 17px; line-height: 1.7; letter-spacing: .04em; padding-bottom: 14px; border-bottom: 1px solid #E3D2C9; }
   .cause-body .lead + p { margin-top: 14px; }
@@ -188,8 +188,9 @@
   .feat.rev .feat-photo { margin-left: auto; }
   .feat-photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
   .feat-photo img.tall { object-position: 50% 30%; }
-  .feat-box { position: relative; width: 86%; margin: -40px 0 0 auto; background: var(--white); padding: 22px 20px 24px; }
-  .feat.rev .feat-box { margin: -40px auto 0 0; }
+  .feat-photo img.low { object-position: 50% 80%; }
+  .feat-box { position: relative; width: 86%; margin: -14px 0 0 auto; background: var(--white); padding: 22px 20px 24px; }
+  .feat.rev .feat-box { margin: -14px auto 0 0; }
   .feat-box .tag { display: inline-block; background: var(--base2); color: var(--sub); font-size: 12.5px; font-weight: 500; padding: 1px 10px; letter-spacing: .06em; }
   .feat-box h3 { margin-top: 8px; font-size: 18px; line-height: 1.6; letter-spacing: .05em; }
   .feat-box p { margin-top: 10px; font-size: 14px; line-height: 1.95; }
@@ -414,7 +415,7 @@
     <p class="slash">伸ばしても、戻ってしまう</p>
     <h2 class="big">その原因は<br><span class="gold">“お腹まわり”</span><small>かもしれません。</small></h2>
     <figure class="cause-photo">
-      <img src="/shisei/images/kensa.jpg" alt="仰向けでお腹を指で確かめ、ペンで印をつけている様子" width="704" height="413" loading="lazy">
+      <img src="/shisei/images/kensa.jpg" alt="仰向けでお腹を指で確かめ、ペンで印をつけている様子" width="704" height="369" loading="lazy">
     </figure>
     <div class="cause-body">
       <p class="lead">伸ばしても戻るのは、<br>意志が弱いからではありません。</p>
@@ -486,7 +487,7 @@
     <div class="trio">
       <div class="c c1"><img src="/shisei/images/zentai.jpg" alt="" width="704" height="880" loading="lazy"><span>全体を<br>みる</span></div>
       <span class="x" aria-hidden="true">×</span>
-      <div class="c c2"><img src="/shisei/images/kensa.jpg" alt="" width="704" height="413" loading="lazy"><span>お腹を<br>みる</span></div>
+      <div class="c c2"><img src="/shisei/images/kensa.jpg" alt="" width="704" height="369" loading="lazy"><span>お腹を<br>みる</span></div>
       <span class="x" aria-hidden="true">×</span>
       <div class="c c3"><img src="/shisei/images/seitai.jpg" alt="" width="704" height="469" loading="lazy"><span>鍼と<br>整体</span></div>
     </div>
@@ -502,7 +503,7 @@
     </article>
 
     <article class="feat rev">
-      <div class="feat-photo"><img src="/shisei/images/hari.jpg" alt="仰向けで、お腹に鍼をしている様子" width="704" height="587" loading="lazy"></div>
+      <div class="feat-photo"><img class="low" src="/shisei/images/hari.jpg" alt="仰向けで、お腹に鍼をしている様子" width="704" height="587" loading="lazy"></div>
       <div class="feat-box">
         <span class="key">いちばんの<br>特徴</span>
         <span class="tag">お腹をみる</span>

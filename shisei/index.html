@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#F4E9E3">
+<meta name="format-detection" content="telephone=no">
 
 <!-- ============================================================
      LINEのURL：ここだけ書き換えてください。
@@ -14,6 +16,7 @@
 <script>
   window.LINE_URL = "https://lin.ee/XXXXXXX";
   window.BOOK_URL = "";
+  document.documentElement.classList.add("js");
 </script>
 
 <title>伸ばしても戻る猫背・巻き肩に｜博多駅筑紫口 徒歩3分｜博多Hakase鍼灸整体院</title>
@@ -29,6 +32,7 @@
 <!-- Meta Pixel：ここにベースコードを貼る -->
 <!-- GA4：ここにgtag.jsのコードを貼る -->
 
+<link rel="preload" as="image" href="/shisei/images/fv.jpg" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <!-- 本文・キャッチ：Noto Sans JP／見出し・院名：Noto Serif JP／英字の飾り：Allura -->
@@ -40,7 +44,7 @@
     --base2: #EDE5E1;    /* 少しグレー寄りの地 */
     --white: #FFFFFF;
     --ink: #3B3836;
-    --sub: #7A726D;
+    --sub: #6B635E;
     --coral: #E0806C;    /* チェック・矢印・強調 */
     --rose: #C98A77;     /* 明朝の見出しの色 */
     --gold1: #D9BC78; --gold2: #B8924B;
@@ -61,6 +65,9 @@
   p, li, dd, summary, h2, h3 { word-break: auto-phrase; }
   .page { max-width: 480px; margin: 0 auto; background: var(--white); padding-bottom: 80px; overflow: hidden; }
   .center { text-align: center; }
+  /* スクロールでふわっと出す（最初の画面は対象外） */
+  .js .rv { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .js .rv.in { opacity: 1; transform: none; }
   .note { font-size: 11.5px; color: var(--sub); line-height: 1.7; }
   .script { font-family: var(--script); font-weight: 400; font-size: 34px; line-height: 1; color: var(--ink); letter-spacing: 0; }
 
@@ -78,13 +85,23 @@
   /* LINEボタン */
   .btn { position: relative; display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; min-height: 60px; padding: 12px 36px 12px 20px;
          background: linear-gradient(180deg, #19D466 0%, var(--line) 55%, var(--line2) 100%); color: #fff; text-decoration: none; border-radius: 8px;
-         box-shadow: 0 4px 0 #039A41; font-weight: 700; font-size: 16.5px; letter-spacing: .04em; white-space: nowrap; line-height: 1.4; }
+         box-shadow: 0 4px 0 #039A41; font-weight: 700; font-size: 16.5px; letter-spacing: .04em; white-space: nowrap; line-height: 1.4;
+         overflow: hidden; isolation: isolate; text-shadow: 0 1px 1px rgba(0,70,25,.25); -webkit-tap-highlight-color: transparent; touch-action: manipulation;
+         transition: transform .12s ease, box-shadow .12s ease; }
+  /* 光が流れる動き：ボタンに目が止まるように */
+  .btn::before { content: ""; position: absolute; top: -10%; left: -75%; width: 45%; height: 120%; pointer-events: none;
+                 background: linear-gradient(100deg, rgba(255,255,255,0), rgba(255,255,255,.55) 50%, rgba(255,255,255,0)); transform: skewX(-22deg);
+                 animation: shine 3.8s ease-in-out infinite; }
+  @keyframes shine { 0% { left: -75%; } 30%, 100% { left: 135%; } }
+  @keyframes nudge { 0%, 55%, 100% { transform: translateX(0) rotate(45deg); } 75% { transform: translateX(4px) rotate(45deg); } }
   .btn svg { width: 24px; height: 24px; flex: none; }
-  .btn::after { content: ""; position: absolute; right: 18px; top: 50%; width: 8px; height: 8px; margin-top: -5px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(45deg); }
+  .btn::after { content: ""; position: absolute; right: 18px; top: 50%; width: 8px; height: 8px; margin-top: -5px; border-top: 2px solid #fff; border-right: 2px solid #fff; transform: rotate(45deg); animation: nudge 1.9s ease-in-out infinite; }
   .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 #039A41; }
   .btn:focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
   .btn-note { margin-top: 12px; font-size: 12.5px; color: var(--sub); text-align: center; line-height: 1.7; }
   .cta { padding: 0 20px; }
+  .cta-pop { margin-bottom: 10px; color: var(--coral); font-size: 14.5px; }
+  .cta-pop::before, .cta-pop::after { background: var(--coral); height: 17px; }
 
   /* ① ファーストビュー */
   .fv { position: relative; background: var(--base); padding-bottom: 36px; }
@@ -94,16 +111,18 @@
   .leaf.l-faq { top: 18px; left: -22px; transform: rotate(-28deg); opacity: .45; }
   .fv > *:not(.leaf) { position: relative; }
   .fv-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; font-size: 11px; color: var(--sub); }
+  .fv-top .loc { display: inline-flex; align-items: center; gap: 3px; padding: 3px 9px 3px 7px; background: rgba(255,255,255,.75); border-radius: 999px; color: var(--ink); font-size: 11px; font-weight: 500; }
+  .fv-top .loc svg { width: 12px; height: 12px; color: var(--coral); }
   .fv-top .name { font-family: var(--serif); font-weight: 600; font-size: 14px; color: var(--ink); letter-spacing: .1em; }
   .fv-catch { padding: 12px 18px 18px; text-align: center; }
   .fv-catch .target { display: inline-block; font-size: 13px; font-weight: 500; letter-spacing: .04em; color: var(--ink); border-bottom: 1px solid var(--coral); padding-bottom: 2px; line-height: 1.6; }
   .fv-catch h1 { margin-top: 12px; line-height: 1.3; }
-  .fv-catch h1 .l1 { display: block; font-size: 31px; font-weight: 700; letter-spacing: .08em; color: var(--ink); }
-  .fv-catch h1 .l2 { display: block; margin-top: 6px; font-family: var(--serif); font-weight: 600; font-size: 33px; letter-spacing: .06em; color: var(--rose); }
+  .fv-catch h1 .l1 { display: block; white-space: nowrap; font-size: clamp(25px, 7.9vw, 31px); font-weight: 700; letter-spacing: .08em; color: var(--ink); }
+  .fv-catch h1 .l2 { display: block; white-space: nowrap; margin-top: 6px; font-family: var(--serif); font-weight: 600; font-size: clamp(26px, 8.2vw, 33px); letter-spacing: .06em; color: var(--rose); }
   .fv-photo { position: relative; }
   .fv-photo img { width: 100%; }
   .badges { position: relative; display: flex; justify-content: center; align-items: center; margin-top: -52px; padding: 0 4px; }
-  .badge { width: 120px; height: 120px; flex: none; border-radius: 50%; background: rgba(255,255,255,.96); box-shadow: 0 2px 10px rgba(110,80,60,.12);
+  .badge { width: clamp(108px, 31vw, 120px); height: clamp(108px, 31vw, 120px); flex: none; border-radius: 50%; background: rgba(255,255,255,.96); box-shadow: 0 2px 10px rgba(110,80,60,.12);
            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
   .badge b { font-family: var(--serif); font-weight: 600; font-size: 20px; line-height: 1.25; letter-spacing: .04em; }
   .badge small { margin-top: 4px; font-size: 10.5px; line-height: 1.4; color: var(--sub); letter-spacing: 0; }
@@ -123,14 +142,27 @@
   .offer .amt b { font-family: var(--sans); font-weight: 700; font-size: 44px; letter-spacing: .01em; color: var(--coral); }
   .offer .amt .yen { font-size: 20px; font-weight: 700; color: var(--coral); }
   .offer .amt small { font-size: 11px; color: var(--sub); }
-  .offer .inc { margin-top: 4px; font-size: 12.5px; color: var(--ink); }
+  .offer .inc { margin-top: 8px; display: flex; justify-content: center; flex-wrap: wrap; gap: 6px; }
+  .offer .inc span { padding: 2px 10px; border: 1px solid #EBB8AB; border-radius: 999px; font-size: 12px; font-weight: 500; color: var(--coral); background: #FFF8F6; }
 
   /* ② お悩み */
   .worry { background: var(--base2); padding: 48px 18px 44px; }
-  .worry-card { background: var(--white); padding: 34px 22px 30px; }
-  .checks { margin-top: 22px; }
-  .checks li { position: relative; padding: 7px 0 7px 32px; font-size: 16px; font-weight: 700; line-height: 1.6; letter-spacing: .03em; }
-  .checks li::before { content: ""; position: absolute; left: 4px; top: 14px; width: 14px; height: 7px; border-left: 3px solid var(--coral); border-bottom: 3px solid var(--coral); transform: rotate(-45deg); }
+  .worry-card { background: var(--white); padding: 34px 18px 24px; }
+  .ck-hint { margin-top: 12px; text-align: center; font-size: 12.5px; font-weight: 500; color: var(--coral); }
+  .checks { margin-top: 14px; }
+  .checks li + li { border-top: 1px dashed #EBDDD6; }
+  .ck { appearance: none; -webkit-appearance: none; display: block; width: 100%; margin: 0; border: 0; background: none; cursor: pointer; text-align: left;
+        position: relative; padding: 11px 4px 11px 38px; font: inherit; font-size: 16px; font-weight: 700; line-height: 1.6; letter-spacing: .03em; color: var(--ink);
+        -webkit-tap-highlight-color: transparent; touch-action: manipulation; border-radius: 6px; transition: background .15s; }
+  .ck::before { content: ""; position: absolute; left: 4px; top: 13px; width: 22px; height: 22px; border: 2px solid #E6B5A8; border-radius: 5px; background: #fff; transition: background .15s, border-color .15s; }
+  .ck::after { content: ""; position: absolute; left: 12px; top: 16px; width: 6px; height: 12px; border-right: 3px solid #fff; border-bottom: 3px solid #fff; transform: rotate(45deg) scale(0); transition: transform .18s cubic-bezier(.3,1.6,.6,1); }
+  .ck[aria-pressed="true"] { background: #FCF4F1; }
+  .ck[aria-pressed="true"]::before { background: var(--coral); border-color: var(--coral); }
+  .ck[aria-pressed="true"]::after { transform: rotate(45deg) scale(1); }
+  .ck:focus-visible { outline: 2px solid var(--coral); outline-offset: 1px; }
+  .ck-result { min-height: 0; margin-top: 0; text-align: center; font-weight: 700; font-size: 15px; transition: margin .2s; }
+  .ck-result:not(:empty) { margin-top: 16px; padding: 10px; background: var(--base); border-radius: 6px; }
+  .ck-result b { color: var(--coral); font-size: 22px; margin: 0 2px; }
   .worry .after { margin-top: 30px; }
   .worry .after p { margin-top: 18px; text-align: center; font-size: 15px; font-weight: 500; line-height: 1.9; }
   .worry .cta { margin-top: 24px; padding: 0 2px; }
@@ -325,7 +357,12 @@
   .shop .hours div { display: grid; grid-template-columns: 5.5em 1fr; padding: 6px 0; border-bottom: 1px solid #E5DAD4; }
   .shop .hours dt { color: var(--sub); }
   .shop .cta { margin-top: 26px; }
-  .shop .final-lead { margin: 26px 20px 14px; font-weight: 700; font-size: 16px; line-height: 1.7; }
+  .shop .final-box { margin: 30px 16px 0; padding: 28px 0 26px; background: var(--base); border-radius: 10px; }
+  .shop .final-box .cta { margin-top: 0; padding: 0 14px; }
+  .shop .final-price { margin: 4px 20px 18px; font-size: 14px; font-weight: 700; line-height: 1.5; }
+  .shop .final-price b { font-size: 26px; color: var(--coral); margin: 0 2px; }
+  .shop .final-price small { display: block; font-size: 11.5px; font-weight: 500; color: var(--sub); }
+  .shop .final-lead { margin: 0 20px 8px; font-weight: 700; font-size: 16px; line-height: 1.7; }
 
   footer { padding: 18px 16px 22px; background: var(--dark); color: rgba(255,255,255,.75); font-size: 11px; text-align: center; letter-spacing: .06em; }
 
@@ -338,7 +375,14 @@
   .sticky .left b { display: block; font-size: 16px; color: var(--coral); }
   .sticky .btn { min-height: 50px; font-size: 15px; padding: 8px 30px 8px 14px; box-shadow: 0 3px 0 #039A41; }
   .sticky .btn::after { right: 14px; }
-  @media (prefers-reduced-motion: reduce) { .sticky, .faq summary::after { transition: none; } }
+  /* 固定バーのボタンは数秒おきに軽く弾む */
+  .sticky.show .btn { animation: pop 5s ease-in-out 1.5s infinite; }
+  @keyframes pop { 0%, 84%, 100% { scale: 1; } 88% { scale: 1.05; } 92% { scale: .99; } 96% { scale: 1.02; } }
+  @media (prefers-reduced-motion: reduce) {
+    .sticky, .faq summary::after, .btn, .ck::before, .ck::after { transition: none; }
+    .btn::before, .btn::after, .sticky.show .btn { animation: none; }
+    .js .rv { opacity: 1; transform: none; transition: none; }
+  }
   @media (min-width: 481px) { .page { box-shadow: 0 0 0 1px rgba(0,0,0,.04); } }
 </style>
 </head>
@@ -355,7 +399,7 @@
   <!-- ① ファーストビュー（Bの「キャッチ＋写真＋3つの丸」の形） -->
   <section class="fv">
     <svg class="leaf l-fv" aria-hidden="true"><use href="#leaf"/></svg>
-    <div class="fv-top"><span class="name">博多Hakase鍼灸整体院</span><span>博多駅 筑紫口 徒歩3分</span></div>
+    <div class="fv-top"><span class="name">博多Hakase鍼灸整体院</span><span class="loc"><svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 1.2a5 5 0 0 0-5 5c0 3.6 5 8.6 5 8.6s5-5 5-8.6a5 5 0 0 0-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg>博多駅 筑紫口 徒歩3分</span></div>
     <div class="fv-catch">
       <p class="target">デスクワークで、猫背・巻き肩が戻ってしまう方へ</p>
       <h1><span class="l1">意識しなくても、</span><span class="l2">背すじがラクな体へ。</span></h1>
@@ -376,12 +420,13 @@
       <div class="offer-bd">
         <p class="course">オーダーメイドコース60分</p>
         <p class="amt"><span class="tag">初回</span><b>9,800</b><span class="yen">円</span><small>（税込）</small></p>
-        <p class="inc">姿勢の写真撮影・検査・施術まで込み／追加料金なし</p>
+        <p class="inc"><span>写真撮影・検査・施術まで込み</span><span>追加料金なし</span></p>
       </div>
     </div>
     <div class="cta">
+      <p class="slash cta-pop">予約の前の、相談だけでも大丈夫</p>
       <a class="btn" data-line data-cta="fv" href="#line"><svg aria-hidden="true"><use href="#i-talk"/></svg>LINEで予約・相談する</a>
-      <p class="btn-note">予約の前に、相談だけでも大丈夫です。<br>返信は院長本人です。</p>
+      <p class="btn-note">LINEは夜でも送れます。返信は院長本人です。</p>
     </div>
   </section>
 
@@ -389,16 +434,18 @@
   <section class="worry">
     <div class="worry-card">
       <h2 class="ttl">こんな<span class="hl">お悩み</span><br>ありませんか？</h2>
+      <p class="ck-hint">当てはまるものを、タップしてみてください</p>
       <ul class="checks">
-        <li>背すじを伸ばしても、気づくと丸まっている</li>
-        <li>写真に写った横姿にドキッとした</li>
-        <li>肩が前に巻いて、首が前に出ている</li>
-        <li>整体に通っても、しばらくすると戻る</li>
-        <li>夕方になると、首と肩が重い</li>
-        <li>反り腰で、立っていると腰がつらい</li>
-        <li>産後、抱っこで背中が丸まったまま</li>
-        <li>事故のあとから、首まわりの不調が抜けない</li>
+        <li><button type="button" class="ck" aria-pressed="false">背すじを伸ばしても、気づくと丸まっている</button></li>
+        <li><button type="button" class="ck" aria-pressed="false">写真に写った横姿にドキッとした</button></li>
+        <li><button type="button" class="ck" aria-pressed="false">肩が前に巻いて、首が前に出ている</button></li>
+        <li><button type="button" class="ck" aria-pressed="false">整体に通っても、しばらくすると戻る</button></li>
+        <li><button type="button" class="ck" aria-pressed="false">夕方になると、首と肩が重い</button></li>
+        <li><button type="button" class="ck" aria-pressed="false">反り腰で、立っていると腰がつらい</button></li>
+        <li><button type="button" class="ck" aria-pressed="false">産後、抱っこで背中が丸まったまま</button></li>
+        <li><button type="button" class="ck" aria-pressed="false">事故のあとから、首まわりの不調が抜けない</button></li>
       </ul>
+      <p class="ck-result" aria-live="polite"></p>
     </div>
     <div class="after">
       <div class="tri" aria-hidden="true"></div>
@@ -537,7 +584,7 @@
         <span class="no">02</span><b>姿勢の写真・検査</b><small><span class="min">5分</span>　関節・お腹・ゆがみ</small>
       </li>
       <li class="step">
-        <span class="ic"><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#7A726D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 31L27 13"/><path d="M27 13l4-4"/><path d="M24 10l6 6"/><path d="M8 26c2 1 4 3 5 5"/></g></svg></span>
+        <span class="ic"><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="none" stroke="#7A726D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 32L22.5 17.5" stroke-width="1.6"/><path d="M23.5 16.5L31 9" stroke-width="4.2"/><path d="M31.5 8.5l1.5-1.5" stroke-width="2"/></g></svg></span>
         <span class="no">03</span><b>鍼・お灸・整体</b><small><span class="min">40分</span>　その日の体に合わせて</small>
       </li>
       <li class="step">
@@ -664,7 +711,7 @@
     <div class="faq-list">
       <details><summary>何回くらい通えばいいですか？</summary><p>姿勢のクセや体の状態で変わるので、初回に体を見てから目安をお伝えします。</p></details>
       <details><summary>着替えは必要ですか？</summary><p>お客様に合わせて対応します。</p></details>
-      <details><summary>鍼が苦手でも受けられますか？</summary><p>整体だけでも受けられます。</p></details>
+      <details><summary>鍼が苦手でも受けられますか？</summary><p>整体だけでも受けられます。整体だけだと、変化に時間がかかることはあります。</p></details>
       <details><summary>予約の前に相談できますか？</summary><p>LINEでできます。返信は院長本人です。日にちが決まっている方は、LINEの予約カレンダーからそのまま予約できます。</p></details>
       <details><summary>セルフケアは教えてもらえますか？</summary><p>はい。セルフケアと、帰るときに気をつけることもお伝えします。</p></details>
       <details><summary>保険は使えますか？</summary><p>使えません。自費の施術です。初回は9,800円（税込）で、追加料金はかかりません。</p></details>
@@ -696,10 +743,14 @@
         <div><dt>空きやすい</dt><dd>平日の昼（火・水の夜は埋まりやすいです）</dd></div>
       </dl>
     </div>
+    <div class="final-box">
     <p class="final-lead">姿勢が戻る理由を、<br>一緒に見てみましょう。</p>
+    <p class="final-price">はじめての方　60分 <b>9,800</b>円<small>税込・追加料金なし</small></p>
     <div class="cta">
+      <p class="slash cta-pop">予約しなくても、相談だけでOK</p>
       <a class="btn" data-line data-cta="final" href="#line"><svg aria-hidden="true"><use href="#i-talk"/></svg>LINEで予約・相談する</a>
-      <p class="btn-note">予約しなくても、相談だけで大丈夫です。</p>
+      <p class="btn-note">LINEは夜でも送れます。返信は院長本人です。</p>
+    </div>
     </div>
   </section>
 
@@ -713,6 +764,27 @@
 
 <script>
 (function () {
+  // 計測（GA4・Metaピクセルのコードを貼れば動きます）
+  function track(name, params) {
+    params = params || {};
+    params.lp = "shisei";
+    if (typeof window.gtag === "function") window.gtag("event", name, params);
+  }
+
+  // 悩みチェック：タップで選べる。選んだ数を表示し、LINEボタンの計測にも渡す
+  var checks = Array.prototype.slice.call(document.querySelectorAll(".ck"));
+  var result = document.querySelector(".ck-result");
+  function checkedCount() { return checks.filter(function (b) { return b.getAttribute("aria-pressed") === "true"; }).length; }
+  checks.forEach(function (b, i) {
+    b.addEventListener("click", function () {
+      var on = b.getAttribute("aria-pressed") !== "true";
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      var n = checkedCount();
+      result.innerHTML = n ? "当てはまったのは<b>" + n + "</b>つ" : "";
+      if (on) track("check_item", { item: i + 1, checked_total: n });
+    });
+  });
+
   // LINEボタンのリンク先をまとめて設定
   // data-book が付いたボタンは、予約カレンダーのURL（BOOK_URL）があればそちらへ
   document.querySelectorAll("[data-line]").forEach(function (a) {
@@ -721,11 +793,36 @@
     a.target = "_blank";
     a.rel = "noopener";
     a.addEventListener("click", function () {
-      var params = { cta_position: a.getAttribute("data-cta"), cta_type: toBook ? "book" : "line", lp: "shisei" };
+      var params = { cta_position: a.getAttribute("data-cta"), cta_type: toBook ? "book" : "line", lp: "shisei", checked_total: checkedCount() };
       if (typeof window.gtag === "function") window.gtag("event", "line_click", params);   // GA4
       if (typeof window.fbq === "function") window.fbq("track", "Contact", params);       // Meta Pixel
     });
   });
+
+  // よくある質問：どれが開かれたかを計測
+  document.querySelectorAll(".faq details").forEach(function (d) {
+    d.addEventListener("toggle", function () { if (d.open) track("faq_open", { question: d.querySelector("summary").textContent }); });
+  });
+
+  // スクロールでふわっと出す＋どこまで読まれたかを計測
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var targets = document.querySelectorAll(".worry-card, .cause .big, .cause-body, .cmp, .whole .ttl, .parts, .motto, .about .ttl, .trio, .feat, .flow .ttl, .steps, .result .ttl, .ba, .voice-box, .hari .ttl, .qa .item, .avoid, .price-card, .inchou .ttl, .creds, .msg, .faq-list, .shop .info");
+  var sections = document.querySelectorAll(".page > section");
+  if ("IntersectionObserver" in window) {
+    if (!reduce) {
+      targets.forEach(function (el) { el.classList.add("rv"); });
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } });
+      }, { rootMargin: "0px 0px -8% 0px" });
+      targets.forEach(function (el) { io.observe(el); });
+    }
+    var seen = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { track("section_view", { section: e.target.className.split(" ")[0] }); seen.unobserve(e.target); }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(function (sec) { seen.observe(sec); });
+  }
 
   // 固定バー：最初から出す。FVのボタンと最後のボタンが画面に見えている間だけ隠す
   var sticky = document.querySelector(".sticky");

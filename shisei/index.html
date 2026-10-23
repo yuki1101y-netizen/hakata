@@ -91,27 +91,30 @@
   .leaf { position: absolute; width: 96px; height: 128px; color: #DCC3B6; opacity: .55; pointer-events: none; }
   .leaf.l-fv { top: 34px; left: -18px; transform: rotate(-24deg); }
   .leaf.l-about { top: 16px; right: -16px; transform: scaleX(-1) rotate(-20deg); }
-  .leaf.l-faq { bottom: 10px; left: -20px; transform: rotate(-150deg); opacity: .4; }
+  .leaf.l-faq { top: 18px; left: -22px; transform: rotate(-28deg); opacity: .45; }
   .fv > *:not(.leaf) { position: relative; }
   .fv-top { display: flex; justify-content: space-between; align-items: center; padding: 10px 16px; font-size: 11px; color: var(--sub); }
   .fv-top .name { font-family: var(--serif); font-weight: 600; font-size: 14px; color: var(--ink); letter-spacing: .1em; }
-  .fv-catch { padding: 14px 18px 18px; text-align: center; }
+  .fv-catch { padding: 12px 18px 18px; text-align: center; }
   .fv-catch .target { display: inline-block; font-size: 13px; font-weight: 500; letter-spacing: .04em; color: var(--ink); border-bottom: 1px solid var(--coral); padding-bottom: 2px; line-height: 1.6; }
   .fv-catch h1 { margin-top: 12px; line-height: 1.3; }
   .fv-catch h1 .l1 { display: block; font-size: 31px; font-weight: 700; letter-spacing: .08em; color: var(--ink); }
   .fv-catch h1 .l2 { display: block; margin-top: 6px; font-family: var(--serif); font-weight: 600; font-size: 33px; letter-spacing: .06em; color: var(--rose); }
   .fv-photo { position: relative; }
   .fv-photo img { width: 100%; }
-  .badges { position: relative; display: flex; justify-content: center; align-items: center; margin-top: -58px; padding: 0 8px; }
-  .badge { width: 116px; height: 116px; flex: none; border-radius: 50%; background: rgba(255,255,255,.96); box-shadow: 0 2px 10px rgba(110,80,60,.12);
+  .badges { position: relative; display: flex; justify-content: center; align-items: center; margin-top: -52px; padding: 0 4px; }
+  .badge { width: 120px; height: 120px; flex: none; border-radius: 50%; background: rgba(255,255,255,.96); box-shadow: 0 2px 10px rgba(110,80,60,.12);
            display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
-  .badge b { font-family: var(--serif); font-weight: 600; font-size: 19px; line-height: 1.25; letter-spacing: .04em; }
-  .badge small { margin-top: 4px; font-size: 9.5px; line-height: 1.4; color: var(--sub); letter-spacing: 0; }
+  .badge b { font-family: var(--serif); font-weight: 600; font-size: 20px; line-height: 1.25; letter-spacing: .04em; }
+  .badge small { margin-top: 4px; font-size: 10.5px; line-height: 1.4; color: var(--sub); letter-spacing: 0; }
+  .badge small.top { margin: 0 0 -2px; font-size: 11px; color: var(--ink); }
+  .badge b + small { margin-top: 3px; }
   .badges .x { flex: none; width: 22px; margin: 0 -8px; z-index: 1; color: var(--coral); font-size: 26px; font-weight: 300; text-align: center; line-height: 1; }
-  .fv-lead { margin: 22px 20px 0; text-align: center; font-size: 15px; font-weight: 500; line-height: 1.85; }
+  .fv-sub { margin-top: 12px; font-size: 15px; font-weight: 500; letter-spacing: .05em; }
+  .fv-sub b { color: var(--coral); font-weight: 700; }
 
   /* 料金の箱（Aの「初めての方限定」の箱にならう） */
-  .offer { margin: 22px 20px 18px; background: var(--white); border-radius: 10px; box-shadow: 0 3px 12px rgba(110,80,60,.12); overflow: hidden; text-align: center; }
+  .offer { margin: 24px 20px 18px; background: var(--white); border-radius: 10px; box-shadow: 0 3px 12px rgba(110,80,60,.12); overflow: hidden; text-align: center; }
   .offer-hd { background: var(--coral); color: #fff; font-weight: 700; font-size: 15px; letter-spacing: .08em; padding: 7px 10px; }
   .offer-bd { padding: 12px 14px 14px; }
   .offer .course { font-size: 13px; font-weight: 500; }
@@ -141,13 +144,14 @@
   .cause-photo { position: relative; margin-top: 26px; }
   .cause-body { position: relative; margin: -46px 18px 0; background: var(--base); padding: 26px 20px 26px; }
   .cause-body p + p { margin-top: 1em; }
+  .cause-body .lead { font-family: var(--serif); font-weight: 600; font-size: 17px; line-height: 1.7; letter-spacing: .04em; padding-bottom: 14px; border-bottom: 1px solid #E3D2C9; }
+  .cause-body .lead + p { margin-top: 14px; }
   .cause-body .em { font-weight: 700; }
   .cause-body .em span { color: var(--coral); }
 
   /* Aの「整体前／整体後」にならった比較図 */
-  .compare { padding: 44px 18px 8px; }
-  .compare .ttl { font-size: 21px; }
-  .cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 22px; }
+  .compare { padding: 40px 18px 8px; }
+  .cmp { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 16px; }
   .cmp-card { background: var(--white); border: 1px solid #EADFD9; border-radius: 8px; padding: 12px 10px 14px; }
   .cmp-card .lbl { display: block; text-align: center; font-weight: 700; font-size: 14px; letter-spacing: .04em; padding: 3px 0; border-radius: 3px; color: #fff; background: var(--gray); }
   .cmp-card.after .lbl { background: linear-gradient(135deg, var(--gold1), var(--gold2)); }
@@ -179,16 +183,17 @@
   .trio .c2 { width: 124px; height: 124px; }
   .trio .x { flex: none; width: 20px; margin: 0 -7px; z-index: 2; color: var(--coral); font-size: 26px; font-weight: 300; text-align: center; line-height: 1; }
   .about .intro { margin: 18px 22px 0; text-align: center; font-size: 15px; line-height: 1.95; }
-  .feat { margin-top: 40px; }
+  .feat { margin-top: 36px; }
   .feat-photo { width: 88%; }
   .feat.rev .feat-photo { margin-left: auto; }
-  .feat-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
-  .feat-photo img.tall { object-position: 50% 35%; }
+  .feat-photo img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+  .feat-photo img.tall { object-position: 50% 30%; }
   .feat-box { position: relative; width: 86%; margin: -40px 0 0 auto; background: var(--white); padding: 22px 20px 24px; }
   .feat.rev .feat-box { margin: -40px auto 0 0; }
   .feat-box .tag { display: inline-block; background: var(--base2); color: var(--sub); font-size: 12.5px; font-weight: 500; padding: 1px 10px; letter-spacing: .06em; }
   .feat-box h3 { margin-top: 8px; font-size: 18px; line-height: 1.6; letter-spacing: .05em; }
   .feat-box p { margin-top: 10px; font-size: 14px; line-height: 1.95; }
+  .feat-box .aside { margin-top: 10px; padding: 8px 12px; background: var(--base); font-size: 12.5px; line-height: 1.7; }
   .feat-box .key { position: absolute; right: -6px; top: -18px; width: 66px; height: 66px; border-radius: 50%; background: linear-gradient(135deg, var(--gold1), var(--gold2)); color: #fff; display: flex; align-items: center; justify-content: center; text-align: center; font-size: 11px; font-weight: 700; line-height: 1.35; letter-spacing: .02em; }
 
   /* ⑤ 初回60分の流れ */
@@ -268,7 +273,8 @@
   .price .how ol { display: grid; grid-template-columns: 1fr 12px 1fr 12px 1fr; align-items: center; margin-top: 6px; }
   .price .how li { background: var(--base2); border-radius: 6px; padding: 6px 2px; font-size: 12px; font-weight: 700; line-height: 1.45; }
   .price .how li.ar { background: none; padding: 0; width: 0; height: 0; border-top: 6px solid transparent; border-bottom: 6px solid transparent; border-left: 7px solid var(--coral); justify-self: center; }
-  .price .cta { margin-top: 20px; padding: 0; }
+  .price .cta { margin-top: 18px; padding: 0; }
+  .price .avail { margin-bottom: 12px; font-size: 12.5px; line-height: 1.7; color: var(--sub); }
   .price .btn { font-size: 15.5px; letter-spacing: .02em; padding-left: 14px; }
 
   /* ⑨ 院長 */
@@ -352,18 +358,18 @@
     <div class="fv-catch">
       <p class="target">デスクワークで、猫背・巻き肩が戻ってしまう方へ</p>
       <h1><span class="l1">意識しなくても、</span><span class="l2">背すじがラクな体へ。</span></h1>
+      <p class="fv-sub">背中だけでなく、<b>お腹まわり</b>から整えます。</p>
     </div>
     <figure class="fv-photo">
-      <img src="/shisei/images/fv.jpg" alt="施術台で、院長に首と頭を支えられてくつろいでいる女性" width="780" height="666">
+      <img src="/shisei/images/fv.jpg" alt="施術台で、院長に首と頭を支えられてくつろいでいる女性" width="780" height="585" fetchpriority="high">
     </figure>
     <div class="badges" aria-label="博多Hakaseの3つの特徴">
-      <div class="badge"><b>国家資格</b><small>鍼灸師歴18年の<br>院長が担当</small></div>
+      <div class="badge"><small class="top">延べ</small><b>11万人</b><small>国家資格・歴18年<br>の院長が担当</small></div>
       <span class="x" aria-hidden="true">×</span>
-      <div class="badge"><b>鍼と<br>整体</b><small>両方できるから<br>選ばなくていい</small></div>
+      <div class="badge"><b>鍼と<br>整体</b><small>その日の体に<br>合わせて組み合わせ</small></div>
       <span class="x" aria-hidden="true">×</span>
-      <div class="badge"><b>お腹<br>から</b><small>背中だけでなく<br>お腹まわりも整える</small></div>
+      <div class="badge"><b>お腹<br>から</b><small>姿勢の相談でも<br>お腹を確かめる</small></div>
     </div>
-    <p class="fv-lead">背中を伸ばしても戻ってしまうのは、<br>お腹まわりがかたいままだから<br>かもしれません。</p>
     <div class="offer">
       <p class="offer-hd">はじめての方</p>
       <div class="offer-bd">
@@ -374,7 +380,7 @@
     </div>
     <div class="cta">
       <a class="btn" data-line data-cta="fv" href="#line"><svg aria-hidden="true"><use href="#i-talk"/></svg>LINEで予約・相談する</a>
-      <p class="btn-note">予約の前に、相談だけでも大丈夫です。返信は院長本人です。</p>
+      <p class="btn-note">予約の前に、相談だけでも大丈夫です。<br>返信は院長本人です。</p>
     </div>
   </section>
 
@@ -383,14 +389,14 @@
     <div class="worry-card">
       <h2 class="ttl">こんな<span class="hl">お悩み</span><br>ありませんか？</h2>
       <ul class="checks">
-        <li>写真に写った横姿にドキッとした</li>
         <li>背すじを伸ばしても、気づくと丸まっている</li>
+        <li>写真に写った横姿にドキッとした</li>
         <li>肩が前に巻いて、首が前に出ている</li>
+        <li>整体に通っても、しばらくすると戻る</li>
         <li>夕方になると、首と肩が重い</li>
         <li>反り腰で、立っていると腰がつらい</li>
-        <li>事故のあとから、首まわりの不調が抜けない</li>
         <li>産後、抱っこで背中が丸まったまま</li>
-        <li>整体に通っても、しばらくすると戻る</li>
+        <li>事故のあとから、首まわりの不調が抜けない</li>
       </ul>
     </div>
     <div class="after">
@@ -399,7 +405,7 @@
     </div>
     <div class="cta">
       <a class="btn" data-line data-cta="after-worry" href="#line"><svg aria-hidden="true"><use href="#i-talk"/></svg>姿勢の悩みをLINEで相談する</a>
-      <p class="btn-note">返信は院長本人です。</p>
+      <p class="btn-note">当てはまったものを、そのまま送ってください。</p>
     </div>
   </section>
 
@@ -408,9 +414,10 @@
     <p class="slash">伸ばしても、戻ってしまう</p>
     <h2 class="big">その原因は<br><span class="gold">“お腹まわり”</span><small>かもしれません。</small></h2>
     <figure class="cause-photo">
-      <img src="/shisei/images/kensa.jpg" alt="仰向けでお腹を指で確かめ、ペンで印をつけている様子" width="704" height="563" loading="lazy">
+      <img src="/shisei/images/kensa.jpg" alt="仰向けでお腹を指で確かめ、ペンで印をつけている様子" width="704" height="413" loading="lazy">
     </figure>
     <div class="cause-body">
+      <p class="lead">伸ばしても戻るのは、<br>意志が弱いからではありません。</p>
       <p>デスクワークやスマホで前かがみの時間が長いと、体の前側、お腹まわりが縮こまってかたくなります。</p>
       <p class="em">前側がかたいままだと、背中をいくら伸ばしても、<span>また前に引き戻されます。</span></p>
       <p>だから博多Hakaseでは、骨格だけでなく、お腹まわりから姿勢をみます。</p>
@@ -419,7 +426,7 @@
 
   <!-- Aの「整体前／整体後」にならった比較図 -->
   <section class="compare">
-    <h2 class="ttl">お腹がかたいままだと<br>こうなります</h2>
+    <p class="slash">図で見ると</p>
     <div class="cmp">
       <div class="cmp-card before">
         <span class="lbl">お腹がかたいまま</span>
@@ -468,7 +475,7 @@
   <section class="whole">
     <h2 class="ttl">首・肩・腰、<br>ひとつずつ通わなくていい。</h2>
     <div class="parts" aria-hidden="true"><span>首</span><span>肩</span><span class="on">お腹</span><span>腰</span></div>
-    <p class="txt">猫背と首のこりと腰の重さは、<br>別々の悩みに見えて、<br>つながっていることがあります。<br>60分のなかで、まとめてみます。</p>
+    <p class="txt">猫背と首のこりと腰の重さは、<br>別々の悩みに見えて、<br>つながっていることがあります。</p>
     <p class="motto">症状がいくつあっても、<br>身体はひとつ。<br>だから、すべてまとめてみます。</p>
   </section>
 
@@ -479,7 +486,7 @@
     <div class="trio">
       <div class="c c1"><img src="/shisei/images/zentai.jpg" alt="" width="704" height="880" loading="lazy"><span>全体を<br>みる</span></div>
       <span class="x" aria-hidden="true">×</span>
-      <div class="c c2"><img src="/shisei/images/kensa.jpg" alt="" width="704" height="563" loading="lazy"><span>お腹を<br>みる</span></div>
+      <div class="c c2"><img src="/shisei/images/kensa.jpg" alt="" width="704" height="413" loading="lazy"><span>お腹を<br>みる</span></div>
       <span class="x" aria-hidden="true">×</span>
       <div class="c c3"><img src="/shisei/images/seitai.jpg" alt="" width="704" height="469" loading="lazy"><span>鍼と<br>整体</span></div>
     </div>
@@ -501,6 +508,7 @@
         <span class="tag">お腹をみる</span>
         <h3>姿勢の相談でも、<br>お腹をゆるめる鍼をします</h3>
         <p>仰向けでお腹のかたさを確かめてから鍼をします。姿勢の相談でお腹？と思われるかもしれませんが、Hakaseではここから始めます。</p>
+        <p class="aside">着替えは、お客様に合わせて対応します。施術は個室です。</p>
       </div>
     </article>
 
@@ -509,7 +517,7 @@
       <div class="feat-box">
         <span class="tag">鍼と整体</span>
         <h3>ボキボキしない整体と、<br>細い鍼を組み合わせます</h3>
-        <p>筋膜を整える整体は、強い力を使いません。手技の引き出しが多いので、その日の体に合わせて選びます。鍼が苦手な方は整体だけでも受けられます（変化に時間がかかることはあります）。</p>
+        <p>筋膜を整える整体は、強い力を使いません。手技の引き出しが多いので、その日の体に合わせて選びます。</p>
       </div>
     </article>
   </section>
@@ -580,7 +588,7 @@
       <figcaption>鍼はすべて使い捨て。髪の毛より細いものから選びます。</figcaption>
     </figure>
     <div class="qa">
-      <div class="item"><b>痛くないですか？</b><p>「蚊に刺されたくらい」と言われることが多いです。その日の状態に合わせて、細い鍼から選びます。</p></div>
+      <div class="item"><b>痛くないですか？</b><p>「蚊に刺されたくらい」と言われることが多く、受けた方の約95%が「これなら大丈夫」とおっしゃいます（当院の実感です）。その日の状態に合わせて、細い鍼から選びます。</p></div>
       <div class="item"><b>衛生面が気になります</b><p>鍼はすべて使い捨てです。消毒も、しみにくい塩素系の薬剤を使っています。</p></div>
       <div class="item"><b>内出血はしますか？</b><p>100人に5人ほどです。出た場合も、10〜14日ほどで引きます。</p></div>
       <div class="item"><b>それでも、鍼がこわいです</b><p>刺さない鍼、お灸、整体だけでもできます。整体だけだと、変化に時間がかかることはあります。</p></div>
@@ -615,8 +623,9 @@
         </ol>
       </div>
       <div class="cta">
+        <p class="avail">平日の昼は比較的空いています。<br>火・水の夜は埋まりやすいので、お早めに。</p>
         <a class="btn" data-line data-book data-cta="after-price" href="#line"><svg aria-hidden="true"><use href="#i-cal"/></svg>LINEで空いている日を見る</a>
-        <p class="btn-note">保険は使えない自費の施術です。</p>
+        <p class="btn-note">日にちが決まっていなくても、<br>相談だけで大丈夫です。</p>
       </div>
     </div>
   </section>
@@ -634,8 +643,8 @@
       <span><b>国家資格</b>はり師・きゅう師</span>
     </div>
     <div class="msg">
-      <p>整骨院に通っても変わらなかった痛みが、私自身にありました。どんな症状にも向き合えるように、勉強に時間とお金をかけてきたのは、そのためです。</p>
-      <p>4人の子どもの父で、妻も施術者です。家のことや子どものことで、女性は自分の体をあと回しにしがちだと、家族を見ていて感じます。</p>
+      <p>整骨院に通っても変わらなかった痛みが、私自身にありました。だから、どんな症状にも向き合えるように、勉強に時間とお金をかけてきました。</p>
+      <p>4人の子どもの父で、妻も施術者です。家のことや子どものことで、女性は自分の体をあと回しにしがちだと、家族を見ていて感じます。ここにいる60分は、ご自分の体のことだけ考えてください。</p>
       <p>猫背だけ、腰だけ、とは考えません。気になるところは、全部まとめて教えてください。</p>
     </div>
     <div class="nots"><b>しないこと</b>痛い施術、危険な施術、望まれていない施術。施術中も、痛くないか、寒くないかを聞きながら進めます。</div>
@@ -652,14 +661,14 @@
     <h2 class="ttl">よくあるご質問</h2>
     <p class="script">Question &amp; Answer</p>
     <div class="faq-list">
-      <details><summary>妊娠中・産後でも受けられますか？</summary><p>体の状態によって変わるので、まずLINEでご相談ください。</p></details>
-      <details><summary>セルフケアは教えてもらえますか？</summary><p>はい。セルフケアと、帰るときに気をつけることもお伝えします。</p></details>
       <details><summary>何回くらい通えばいいですか？</summary><p>姿勢のクセや体の状態で変わるので、初回に体を見てから目安をお伝えします。</p></details>
       <details><summary>着替えは必要ですか？</summary><p>お客様に合わせて対応します。</p></details>
       <details><summary>鍼が苦手でも受けられますか？</summary><p>整体だけでも受けられます。</p></details>
+      <details><summary>予約の前に相談できますか？</summary><p>LINEでできます。返信は院長本人です。日にちが決まっている方は、LINEの予約カレンダーからそのまま予約できます。</p></details>
+      <details><summary>セルフケアは教えてもらえますか？</summary><p>はい。セルフケアと、帰るときに気をつけることもお伝えします。</p></details>
       <details><summary>保険は使えますか？</summary><p>使えません。自費の施術です。初回は9,800円（税込）で、追加料金はかかりません。</p></details>
       <details><summary>当日お風呂に入ってもいいですか？</summary><p>入って大丈夫です。</p></details>
-      <details><summary>予約の前に相談できますか？</summary><p>LINEでできます。返信は院長本人です。日にちが決まっている方は、LINEの予約カレンダーからそのまま予約できます。</p></details>
+      <details><summary>妊娠中・産後でも受けられますか？</summary><p>体の状態によって変わるので、まずLINEでご相談ください。</p></details>
     </div>
   </section>
 
@@ -717,7 +726,7 @@
     });
   });
 
-  // 固定バー：FVのボタンを通り過ぎたら出す。最後のボタンが見えている間は隠す
+  // 固定バー：最初から出す。FVのボタンと最後のボタンが画面に見えている間だけ隠す
   var sticky = document.querySelector(".sticky");
   var fvBtn = document.querySelector('[data-cta="fv"]');
   var finalBtn = document.querySelector('[data-cta="final"]');
@@ -727,7 +736,8 @@
     var vh = window.innerHeight;
     var fv = fvBtn.getBoundingClientRect();
     var fin = finalBtn.getBoundingClientRect();
-    var show = fv.bottom < 0 && !(fin.top < vh && fin.bottom > 0);
+    var inView = function (r) { return r.top < vh && r.bottom > 0; };
+    var show = !inView(fv) && !inView(fin);
     sticky.classList.toggle("show", show);
     sticky.setAttribute("aria-hidden", show ? "false" : "true");
     sticky.querySelector("a").tabIndex = show ? 0 : -1;

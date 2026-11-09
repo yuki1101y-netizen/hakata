@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    { "source": "/biyou", "destination": "https://hakase-hakata.com/biyou/", "permanent": true },
+    { "source": "/biyou/:path*", "destination": "https://hakase-hakata.com/biyou/", "permanent": true },
+    { "source": "/katakori", "destination": "https://hakase-hakata.com/katakori/", "permanent": true },
+    { "source": "/katakori/:path*", "destination": "https://hakase-hakata.com/katakori/", "permanent": true },
+    { "source": "/shisei", "destination": "https://hakase-hakata.com/shisei/", "permanent": true },
+    { "source": "/shisei/:path*", "destination": "https://hakase-hakata.com/shisei/", "permanent": true },
+    { "source": "/hakase-lp-biyou.html", "destination": "https://hakase-hakata.com/biyou/", "permanent": true },
+    { "source": "/hakase-lp-katakori.html", "destination": "https://hakase-hakata.com/katakori/", "permanent": true },
+    { "source": "/hakase-lp-youtsu.html", "destination": "https://hakase-hakata.com/youtsu/", "permanent": true },
+    { "source": "/", "destination": "https://hakase-hakata.com/", "permanent": true }
+  ]
+}
